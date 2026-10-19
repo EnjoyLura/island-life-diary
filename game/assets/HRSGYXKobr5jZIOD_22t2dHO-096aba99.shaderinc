@@ -1,0 +1,39 @@
+// Shared with Game.OceanMotion. No wave trigonometry in the water fragment.
+uniform float ocean_time = 0.0;
+uniform float wave_strength = 1.0;
+uniform float wave_steepness = .38;
+uniform vec4 wave_a = vec4(.19,.26,1.07,.34);
+uniform vec4 wave_b = vec4(-.32,.18,1.22,.15);
+uniform vec4 wave_c = vec4(.12,-.17,.81,.10);
+vec3 gerstner_offset(vec2 p,vec4 w,float offset,float damping) {
+    float phase=dot(p,w.xy)-ocean_time*w.z+offset;
+    float a=w.w*wave_strength*damping;
+    vec2 d=normalize(w.xy);
+    return vec3(d.x*wave_steepness*a*cos(phase),a*sin(phase),d.y*wave_steepness*a*cos(phase));
+}
+vec3 ocean_offset(vec2 p,float damping) {
+    return gerstner_offset(p,wave_a,0.0,damping)+gerstner_offset(p,wave_b,1.7,damping)+gerstner_offset(p,wave_c,.6,damping);
+}
+vec3 gerstner_derivative(vec2 p,vec4 w,float offset,float damping,vec2 axis) {
+    float phase=dot(p,w.xy)-ocean_time*w.z+offset;
+    float a=w.w*wave_strength*damping*dot(w.xy,axis);
+    vec2 d=normalize(w.xy);
+    return vec3(-d.x*wave_steepness*a*sin(phase),a*cos(phase),-d.y*wave_steepness*a*sin(phase));
+}
+vec3 ocean_normal(vec2 p,float damping) {
+    vec3 tx=vec3(1.0,0.0,0.0)+gerstner_derivative(p,wave_a,0.0,damping,vec2(1.0,0.0))
+        +gerstner_derivative(p,wave_b,1.7,damping,vec2(1.0,0.0))+gerstner_derivative(p,wave_c,.6,damping,vec2(1.0,0.0));
+    vec3 tz=vec3(0.0,0.0,1.0)+gerstner_derivative(p,wave_a,0.0,damping,vec2(0.0,1.0))
+        +gerstner_derivative(p,wave_b,1.7,damping,vec2(0.0,1.0))+gerstner_derivative(p,wave_c,.6,damping,vec2(0.0,1.0));
+    return normalize(cross(tz,tx));
+}
+// World-space inverse for tiny wakes/fish overlays, never per water fragment.
+float ocean_height_at(vec2 p,float damping) {
+    vec2 q=p;
+    q=p-ocean_offset(q,damping).xz;
+    q=p-ocean_offset(q,damping).xz;
+    q=p-ocean_offset(q,damping).xz;
+    q=p-ocean_offset(q,damping).xz;
+    return ocean_offset(q,damping).y;
+}
+float ocean_height(vec2 p) { return ocean_height_at(p,1.0); }

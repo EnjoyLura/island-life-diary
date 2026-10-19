@@ -1,0 +1,13 @@
+#ifndef CLUSTER_SAMPLERS_SH_HEADER_GUARD
+#define CLUSTER_SAMPLERS_SH_HEADER_GUARD
+
+// Cluster construction and light culling only.
+#define SAMPLER_CLUSTERS_CLUSTERS 11
+#define SAMPLER_CLUSTERS_ATOMICINDEX 12
+
+// Cluster lighting inputs, shared by every platform.
+#define SAMPLER_LIGHTS_POINTLIGHTS 13
+#define SAMPLER_CLUSTERS_LIGHTINDICES 14
+#define SAMPLER_CLUSTERS_LIGHTGRID 15
+
+#endif // CLUSTER_SAMPLERS_SH_HEADER_GUARD

@@ -1,0 +1,43 @@
+{
+  "engine_version": "5.5.4",
+  "engine_commit": "2d53fcab0066b1f16dd956b227720841cad0f6f7",
+  "exporter": "TextureExporterDDS for unchanged inputs; native-size UE GPU mip-zero readback for CloudPattern and PerlinWorley",
+  "textures": {
+    "CloudPattern": {
+      "source": "/Engine/EngineSky/VolumetricClouds/T_CloudPattern",
+      "sha256": "695c9567332af0ce4a321e62e6fa8e6ef5004d3d4103cab4c6c7c79f0f657344",
+      "source_sha256": "8adcd15c029a6d7f6e484b0181f595d2063ebaf97c54e93f377939610ee1d27d",
+      "storage": "RGBA16F, mip zero, native UE runtime resolution; unused alpha is one",
+      "export_script": "engine/Tests/Integration/volumetric_cloud/export_ue_cloud_gpu.py",
+      "runtime_size": [
+        256,
+        256
+      ],
+      "source_size": [
+        1024,
+        1024
+      ],
+      "ue_max_texture_size": 256
+    },
+    "HeightProfile": {
+      "source": "/Engine/EngineSky/VolumetricClouds/T_Profile_08",
+      "sha256": "3909f7fc13c7c623528c737feb609fece80c1e4ad8f5782b1198a403f6802106"
+    },
+    "PerlinWorley": {
+      "source": "/Engine/EngineSky/VolumetricClouds/VT_PerlinWorley_Balanced",
+      "sha256": "179452a4e53a687e3ebec1ec117e9449551c819a088895c2815dff81fa7491b3",
+      "source_sha256": "59dbae1ec6fb17baf308e41d5d293372bc99ffd7c9ad1fedb1760535dd25bc3a",
+      "storage": "RGBA16F, mip zero, native UE runtime resolution; unused alpha is one",
+      "export_script": "engine/Tests/Integration/volumetric_cloud/export_ue_cloud_gpu.py",
+      "runtime_size": [
+        128,
+        128,
+        128
+      ]
+    },
+    "BlueNoise": {
+      "source": "/Engine/EngineMaterials/FastBlueNoise_scalar_128x128x64",
+      "sha256": "ff62be4af5e5a5b98503049f87d1bdf017dbe02084bee148031702836423c174"
+    }
+  }
+}

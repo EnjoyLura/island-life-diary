@@ -1,0 +1,288 @@
+<renderpath useHDR="true" zPrepass="true" reuseShadowMaps="false">
+    <!-- Mixed Mesh/DDA profile: depth-only Mesh GTAO, one DDA main hit, tile-local depth auxiliary, previous full HZB SSR. See docs/plans/mobile-deferred-rendering.md. -->
+    <rendertarget name="depth" sizedivisor="1 1" format="readabledepth" />
+    <rendertarget name="SceneColor" sizedivisor="1 1" format="rgba16f" />
+    <rendertarget name="MobileGBufferA" sizedivisor="1 1" format="rgba" lifetime="renderpass" />
+    <rendertarget name="MobileGBufferB" sizedivisor="1 1" format="rgba" lifetime="renderpass" />
+    <rendertarget name="MobileGBufferC" sizedivisor="1 1" format="rgba" srgb="true" lifetime="renderpass" />
+    <rendertarget name="MobileDepthAux" sizedivisor="1 1" format="r32f" lifetime="renderpass" />
+    <rendertarget name="MobileGTAOHorizon" sizedivisor="2 2" roundup="true" format="rgba" />
+    <rendertarget name="MobileAO" sizedivisor="2 2" roundup="true" format="r8" />
+    <rendertarget name="MotionVector" sizedivisor="1 1" format="rg16f" />
+    <rendertarget name="depth_buffer" sizedivisor="1 1" format="r32f" />
+    <rendertarget name="SceneTemporal" sizedivisor="1 1" format="rgba16f" />
+    <rendertarget name="TAAHistory" sizedivisor="1 1" format="rgba16f" persistent="true" />
+    <rendertarget name="FarthestHiZ_Mip0" sizepow2half="0" format="r32f">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+    </rendertarget>
+    <rendertarget name="FarthestHiZ_Mip1" sizepow2half="1" format="r32f">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+    </rendertarget>
+    <rendertarget name="FarthestHiZ_Mip2" sizepow2half="2" format="r32f">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+    </rendertarget>
+    <rendertarget name="FarthestHiZ_Mip3" sizepow2half="3" format="r32f">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+    </rendertarget>
+    <rendertarget name="FarthestHiZ_Mip4" sizepow2half="4" format="r32f">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+    </rendertarget>
+    <rendertarget name="FarthestHiZ_Mip5" sizepow2half="5" format="r32f">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+    </rendertarget>
+    <rendertarget name="FarthestHiZ_Mip6" sizepow2half="6" format="r32f">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+    </rendertarget>
+    <rendertarget name="FarthestHiZ_Mip7" sizepow2half="7" format="r32f">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+    </rendertarget>
+    <rendertarget name="FarthestHiZ_Mip8" sizepow2half="8" format="r32f">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+    </rendertarget>
+    <rendertarget name="FarthestHiZ" sizepow2half="0" format="r32f" miplevels="9" persistent="true">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+    </rendertarget>
+    <command type="clear" depth="1.0" stencil="0" output="depth" depthstencil="depth" />
+    <command type="scenepass" pass="depth" jitter="true" output="depth" depthstencil="depth" />
+    <command type="gfx" autoGenDepthStencil="false" />
+    <command type="quad" tag="Mobile GTAO" jitter="true" disableDepthStencilRT="true" vs="ScreenSpace/SSAO/MobileGTAO" ps="ScreenSpace/SSAO/MobileGTAO" psdefines="MOBILE_GTAO_QUALITY=1 MOBILE_GTAO_LUT=0">
+        <input semantic="Depth" name="depth" type="texture2d" />
+        <texture unit="0" name="depth" />
+        <output index="0" name="MobileGTAOHorizon" />
+        <execution name="ApplyMobileGTAOParameters" />
+    </command>
+    <command type="quad" tag="Mobile GTAO Spatial Filter" disableDepthStencilRT="true" vs="ScreenSpace/SSAO/MobileGTAOSpatialFilter" ps="ScreenSpace/SSAO/MobileGTAOSpatialFilter">
+        <texture unit="0" name="MobileGTAOHorizon" />
+        <output index="0" name="MobileAO" />
+        <execution name="ApplyMobileGTAOParameters" />
+    </command>
+    <renderpass name="OpaqueLighting">
+        <attachment index="0" name="SceneColor" load="clear" store="store" color="0 0 0 0" />
+        <attachment index="1" name="MobileGBufferA" load="clear" store="discard" color="0 0 0 0" />
+        <attachment index="2" name="MobileGBufferB" load="clear" store="discard" color="0 0 0 0" />
+        <attachment index="3" name="MobileGBufferC" load="clear" store="discard" color="0 0 0 0" />
+        <attachment index="4" name="MobileDepthAux" load="clear" store="discard" color="0 0 0 0" />
+        <depthstencil name="depth" depthload="load" depthstore="store" stencilload="load" stencilstore="store" />
+        <subpass name="Base">
+            <output index="0" name="SceneColor" />
+            <output index="1" name="MobileGBufferA" />
+            <output index="2" name="MobileGBufferB" />
+            <output index="3" name="MobileGBufferC" />
+            <output index="4" name="MobileDepthAux" />
+            <depthstencil depth="readonly" stencil="readwrite" />
+            <command type="scenepass" pass="deferred" role="gbuffer" metadata="gbuffer" psdefines="MOBILE_DEFERRED MOBILE_DEPTH_AUX HIGH_PRECISION_OUTPUT=1" jitter="true" vertexlights="true" marktostencil="true" highPriorityDepthTest="equal" highPriorityDepthWrite="false" depthstencil="depth">
+                <output index="0" name="SceneColor" />
+                <output index="1" name="MobileGBufferA" />
+                <output index="2" name="MobileGBufferB" />
+                <output index="3" name="MobileGBufferC" />
+                <output index="4" name="MobileDepthAux" />
+            </command>
+        </subpass>
+        <subpass name="VoxelBase">
+            <output index="0" name="SceneColor" />
+            <output index="1" name="MobileGBufferA" />
+            <output index="2" name="MobileGBufferB" />
+            <output index="3" name="MobileGBufferC" />
+            <output index="4" name="MobileDepthAux" />
+            <depthstencil depth="readwrite" stencil="readwrite" />
+            <command type="scenepass" pass="deferredvox" role="gbuffer" metadata="gbuffer" psdefines="MOBILE_DEFERRED MOBILE_DEPTH_AUX HIGH_PRECISION_OUTPUT=1 VOXEL_STATIC_AO=0" jitter="true" vertexlights="true" marktostencil="true" highPriorityDepthTest="lessequal" highPriorityDepthWrite="true" depthstencil="depth">
+                <output index="0" name="SceneColor" />
+                <output index="1" name="MobileGBufferA" />
+                <output index="2" name="MobileGBufferB" />
+                <output index="3" name="MobileGBufferC" />
+                <output index="4" name="MobileDepthAux" />
+            </command>
+        </subpass>
+        <subpass name="Lighting">
+            <!-- Local input indices are shader input-attachment bindings, not texture units. -->
+            <attachmentinput index="0" name="MobileGBufferA" />
+            <attachmentinput index="1" name="MobileGBufferB" />
+            <attachmentinput index="3" name="MobileDepthAux" />
+            <attachmentinput index="2" name="MobileGBufferC" />
+            <output index="0" name="SceneColor" />
+            <depthstencil depth="readonly" stencil="readonly" />
+            <!-- Direct lights only. Additive blending preserves Base Pass emissive.
+                 No per-light ambient, emissive, reflection or temporal-shadow screen filtering. -->
+            <command type="lightvolumes" jitter="true" blend="add" depthstencil="depth" vs="PBR/MobileDeferredLighting" ps="PBR/MobileDeferredLighting" psdefines="MOBILE_DEFERRED MOBILE_DEPTH_AUX">
+                <output index="0" name="SceneColor" />
+            </command>
+            <!-- Exactly one of these environment draws runs, even with zero direct lights.
+                 The SSR-off variant has no dependency on the disabled HZB resources. -->
+            <command type="quad" tag="Mobile Environment with SSR" jitter="true" blend="add" depthstencil="depth" vs="PBR/MobileDeferredEnvironment" ps="PBR/MobileDeferredEnvironment" psdefines="MOBILE_DEFERRED MOBILE_SSR MOBILE_DEPTH_AUX MOBILE_SSR_PREVIOUS_HZB URHOX_MOBILE_SSR_HIT_PATCHES=0">
+                <condition name="IsSSREnabled" type="Bool" value="true" />
+                <conditiondefines condition="IsReflectionProbeReady" psdefines="REFLECTION_PROBES" />
+                <input semantic="FarthestDepthPyramid" name="FarthestHiZ" type="texture2d" />
+                <texture unit="1" name="MobileAO" filter="true" />
+                <texture unit="2" name="FarthestHiZ" />
+                <texture unit="3" name="TAAHistory" filter="true" />
+                <output index="0" name="SceneColor" />
+                <!-- UE mobile Low=8 steps; Medium=12 with current velocity. -->
+                <parameter name="MobileSSRQuality" value="1" />
+                <parameter name="MobileSSRMaxRoughness" value="0.6" />
+                <!-- UrhoX hit refinement and thickness validation; 0 bypasses the patches at runtime. -->
+                <!-- Hit patches are OFF for frame rate; set URHOX_MOBILE_SSR_HIT_PATCHES=1 above to opt in. -->
+                <parameter name="Thickness" value="1.0" />
+                <execution name="ApplyMobileSSRParameters" />
+                <execution name="ApplyReflectionProbeParameters" />
+            </command>
+            <command type="quad" tag="Mobile Environment" jitter="true" blend="add" depthstencil="depth" vs="PBR/MobileDeferredEnvironment" ps="PBR/MobileDeferredEnvironment" psdefines="MOBILE_DEFERRED MOBILE_DEPTH_AUX">
+                <condition name="IsSSREnabled" type="Bool" value="false" />
+                <conditiondefines condition="IsReflectionProbeReady" psdefines="REFLECTION_PROBES" />
+                <texture unit="1" name="MobileAO" filter="true" />
+                <output index="0" name="SceneColor" />
+                <execution name="ApplyReflectionProbeParameters" />
+            </command>
+        </subpass>
+    </renderpass>
+    <!-- MainDepth now includes DDA hits. Prepare next-frame HZB and current TAA motion; inline SSR deliberately used the previous full hierarchy. -->
+    <command type="quad" tag="Mobile HZB Init" disableDepthStencilRT="true" vs="ScreenSpace/HiZ/HiZFarthestInit" ps="ScreenSpace/HiZ/HiZFarthestInit" psdefines="HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="depth" />
+        <output index="0" name="FarthestHiZ_Mip0" />
+        <execution name="ApplyHiZBuildParameters" />
+    </command>
+    <command type="quad" tag="Mobile HZB Downsample 1" disableDepthStencilRT="true" vs="ScreenSpace/HiZ/HiZFarthestDownsample" ps="ScreenSpace/HiZ/HiZFarthestDownsample" psdefines="HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip0" />
+        <output index="0" name="FarthestHiZ_Mip1" />
+    </command>
+    <command type="quad" tag="Mobile HZB Downsample 2" disableDepthStencilRT="true" vs="ScreenSpace/HiZ/HiZFarthestDownsample" ps="ScreenSpace/HiZ/HiZFarthestDownsample" psdefines="HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip1" />
+        <output index="0" name="FarthestHiZ_Mip2" />
+    </command>
+    <command type="quad" tag="Mobile HZB Downsample 3" disableDepthStencilRT="true" vs="ScreenSpace/HiZ/HiZFarthestDownsample" ps="ScreenSpace/HiZ/HiZFarthestDownsample" psdefines="HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip2" />
+        <output index="0" name="FarthestHiZ_Mip3" />
+    </command>
+    <command type="quad" tag="Mobile HZB Downsample 4" disableDepthStencilRT="true" vs="ScreenSpace/HiZ/HiZFarthestDownsample" ps="ScreenSpace/HiZ/HiZFarthestDownsample" psdefines="HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip3" />
+        <output index="0" name="FarthestHiZ_Mip4" />
+    </command>
+    <command type="quad" tag="Mobile HZB Downsample 5" disableDepthStencilRT="true" vs="ScreenSpace/HiZ/HiZFarthestDownsample" ps="ScreenSpace/HiZ/HiZFarthestDownsample" psdefines="HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip4" />
+        <output index="0" name="FarthestHiZ_Mip5" />
+    </command>
+    <command type="quad" tag="Mobile HZB Downsample 6" disableDepthStencilRT="true" vs="ScreenSpace/HiZ/HiZFarthestDownsample" ps="ScreenSpace/HiZ/HiZFarthestDownsample" psdefines="HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip5" />
+        <output index="0" name="FarthestHiZ_Mip6" />
+    </command>
+    <command type="quad" tag="Mobile HZB Downsample 7" disableDepthStencilRT="true" vs="ScreenSpace/HiZ/HiZFarthestDownsample" ps="ScreenSpace/HiZ/HiZFarthestDownsample" psdefines="HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip6" />
+        <output index="0" name="FarthestHiZ_Mip7" />
+    </command>
+    <command type="quad" tag="Mobile HZB Downsample 8" disableDepthStencilRT="true" vs="ScreenSpace/HiZ/HiZFarthestDownsample" ps="ScreenSpace/HiZ/HiZFarthestDownsample" psdefines="HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip7" />
+        <output index="0" name="FarthestHiZ_Mip8" />
+    </command>
+    <command type="quad" tag="Mobile HZB Copy 0" disableDepthStencilRT="true" vs="ScreenSpace/CopyTexture" ps="ScreenSpace/CopyTexture" psdefines="COPY_DEPTH HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip0" />
+        <output index="0" name="FarthestHiZ" mip="0" />
+    </command>
+    <command type="quad" tag="Mobile HZB Copy 1" disableDepthStencilRT="true" vs="ScreenSpace/CopyTexture" ps="ScreenSpace/CopyTexture" psdefines="COPY_DEPTH HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip1" />
+        <output index="0" name="FarthestHiZ" mip="1" />
+    </command>
+    <command type="quad" tag="Mobile HZB Copy 2" disableDepthStencilRT="true" vs="ScreenSpace/CopyTexture" ps="ScreenSpace/CopyTexture" psdefines="COPY_DEPTH HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip2" />
+        <output index="0" name="FarthestHiZ" mip="2" />
+    </command>
+    <command type="quad" tag="Mobile HZB Copy 3" disableDepthStencilRT="true" vs="ScreenSpace/CopyTexture" ps="ScreenSpace/CopyTexture" psdefines="COPY_DEPTH HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip3" />
+        <output index="0" name="FarthestHiZ" mip="3" />
+    </command>
+    <command type="quad" tag="Mobile HZB Copy 4" disableDepthStencilRT="true" vs="ScreenSpace/CopyTexture" ps="ScreenSpace/CopyTexture" psdefines="COPY_DEPTH HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip4" />
+        <output index="0" name="FarthestHiZ" mip="4" />
+    </command>
+    <command type="quad" tag="Mobile HZB Copy 5" disableDepthStencilRT="true" vs="ScreenSpace/CopyTexture" ps="ScreenSpace/CopyTexture" psdefines="COPY_DEPTH HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip5" />
+        <output index="0" name="FarthestHiZ" mip="5" />
+    </command>
+    <command type="quad" tag="Mobile HZB Copy 6" disableDepthStencilRT="true" vs="ScreenSpace/CopyTexture" ps="ScreenSpace/CopyTexture" psdefines="COPY_DEPTH HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip6" />
+        <output index="0" name="FarthestHiZ" mip="6" />
+    </command>
+    <command type="quad" tag="Mobile HZB Copy 7" disableDepthStencilRT="true" vs="ScreenSpace/CopyTexture" ps="ScreenSpace/CopyTexture" psdefines="COPY_DEPTH HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip7" />
+        <output index="0" name="FarthestHiZ" mip="7" />
+    </command>
+    <command type="quad" tag="Mobile HZB Copy 8" disableDepthStencilRT="true" vs="ScreenSpace/CopyTexture" ps="ScreenSpace/CopyTexture" psdefines="COPY_DEPTH HIGH_PRECISION_OUTPUT=1">
+        <condition name="IsSSREnabled" type="Bool" value="true" />
+        <texture unit="0" name="FarthestHiZ_Mip8" />
+        <output index="0" name="FarthestHiZ" mip="8" />
+    </command>
+    <command type="quad" tag="Motion Vector" role="camera-motion" vs="ScreenSpace/MotionVector/MotionVector" ps="ScreenSpace/MotionVector/MotionVector">
+        <input semantic="Depth" name="depth" type="texture2d" />
+        <texture unit="0" name="depth" />
+        <output index="0" name="MotionVector" />
+        <execution name="ApplyMotionVectorParameters" />
+    </command>
+    <command type="scenepass" pass="velocity" tag="Object Velocity" role="object-motion" jitter="true" highPriorityDepthTest="equal" highPriorityDepthWrite="false" marktostencil="false" depthstencil="depth">
+        <output index="0" name="MotionVector" />
+    </command>
+    <command type="gfx" autoGenDepthStencil="true" />
+    <command type="scenepass" pass="postopaque" jitter="true" depthstencil="depth">
+        <output index="0" name="SceneColor" />
+    </command>
+    <command type="quad" tag="CopyDepth" vs="ScreenSpace/CopyTexture" ps="ScreenSpace/CopyTexture" psdefines="COPY_DEPTH HIGH_PRECISION_OUTPUT=1" disableDepthStencilRT="true">
+        <texture unit="0" name="depth" />
+        <output index="0" name="depth_buffer" />
+    </command>
+    <command type="scenepass" pass="screenread" jitter="true" sort="backtofront" renderMask="7" depthstencil="depth">
+        <texture unit="1" name="depth_buffer" />
+        <output index="0" name="SceneColor" />
+    </command>
+    <command type="scenepass" pass="singlelayerwater" jitter="true" psdefines="SSR_WATER FOG_IN_POSTPROCESS" highPriorityDepthWrite="true" depthstencil="depth">
+        <texture unit="3" name="depth_buffer" />
+        <output index="0" name="SceneColor" />
+        <parameter name="SSRWaterIntensity" value="1.0" />
+    </command>
+    <command type="quad" tag="Scene Fog" vs="ScreenSpace/Fog/SceneFog" ps="ScreenSpace/Fog/SceneFog" blend="premulalpha" disableDepthStencilRT="true">
+        <condition name="IsSceneFogEnabled" type="Bool" value="true" />
+        <texture unit="0" name="depth" />
+        <output index="0" name="SceneColor" />
+        <parameter name="SkyFogHorizonSoftness" value="0.20" />
+        <execution name="ApplySceneFogParameters" />
+    </command>
+    <command type="scenepass" pass="alpha" jitter="true" vertexlights="true" sort="backtofront" metadata="alpha" depthstencil="depth">
+        <output index="0" name="SceneColor" />
+    </command>
+    <command type="scenepass" pass="postalpha" jitter="true" sort="backtofront" depthstencil="depth">
+        <output index="0" name="SceneColor" />
+    </command>
+    <command type="gfx" autoGenDepthStencil="false" />
+    <command type="quad" tag="TAA Resolve" role="taa-resolve" disableDepthStencilRT="true" vs="ScreenSpace/TAA/TAAResolve" ps="ScreenSpace/TAA/TAAResolve">
+        <texture unit="0" name="SceneColor" />
+        <texture unit="1" name="TAAHistory" filter="true" />
+        <texture unit="2" name="MotionVector" />
+        <texture unit="3" name="depth" />
+        <output index="0" name="SceneTemporal" />
+        <parameter name="TAABlendFactor" value="0.04" />
+        <execution name="ApplyTAAResolveParameters" />
+    </command>
+    <command type="quad" tag="HDR History Copy" disableDepthStencilRT="true" vs="ScreenSpace/CopyTexture" ps="ScreenSpace/CopyTexture">
+        <texture unit="0" name="SceneTemporal" />
+        <output index="0" name="TAAHistory" />
+    </command>
+    <command type="quad" tag="Postprocess Input" disableDepthStencilRT="true" vs="ScreenSpace/CopyTexture" ps="ScreenSpace/CopyTexture">
+        <texture unit="0" name="SceneTemporal" />
+        <output index="0" name="viewport" />
+    </command>
+    <command type="gfx" autoGenDepthStencil="true" />
+    <postprocess type="postprocess" name="EngineRes/PostProcess/GamePostProcess.xml" />
+</renderpath>

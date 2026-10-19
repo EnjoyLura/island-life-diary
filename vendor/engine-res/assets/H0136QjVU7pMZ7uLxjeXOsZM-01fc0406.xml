@@ -1,0 +1,55 @@
+<renderpath>
+    <rendertarget name="CaptureDepth" sizedivisor="1 1" format="readabledepth" />
+    <rendertarget name="GBufferA" sizedivisor="1 1" format="rgba" />
+    <rendertarget name="GBufferB" sizedivisor="1 1" format="rgba" />
+    <rendertarget name="GBufferC" sizedivisor="1 1" format="rgba" />
+    <rendertarget name="GBufferD" sizedivisor="1 1" format="rgba16f" />
+    <rendertarget name="GBufferE" sizedivisor="1 1" format="rgba" />
+    <rendertarget name="CaptureLighting" sizedivisor="1 1" format="rgba16f" />
+    <command type="clear" depth="1.0" stencil="0" depthstencil="CaptureDepth" />
+    <command type="scenepass" pass="depth" depthstencil="CaptureDepth" />
+    <command type="clear" color="0 0 0 0">
+        <output index="0" name="GBufferA" />
+        <output index="1" name="GBufferB" />
+        <output index="2" name="GBufferC" />
+        <output index="3" name="GBufferD" />
+        <output index="4" name="GBufferE" />
+    </command>
+    <command type="scenepass" pass="deferred" psdefines="DEFERRED_CLEAR_COAT DEFERRED_BACKLIGHT" vertexlights="true" metadata="gbuffer"
+        highPriorityDepthTest="equal" depthstencil="CaptureDepth">
+        <output index="0" name="GBufferA" />
+        <output index="1" name="GBufferB" />
+        <output index="2" name="GBufferC" />
+        <output index="3" name="GBufferD" />
+        <output index="4" name="GBufferE" />
+    </command>
+    <command type="clear" color="0 0 0 0" output="CaptureLighting" />
+    <!-- Evaluate ambient and emissive exactly once, including scenes without any lights. -->
+    <command type="quad" vs="PBR/StandardPBRDeferred" ps="PBR/StandardPBRDeferred" vsdefines="DIRLIGHT"
+        psdefines="DEFERRED_CLEAR_COAT DEFERRED_BACKLIGHT DIRLIGHT AMBIENT ENVCUBE DEFERRED SPLIT_LIGHTING REFLECTION_CAPTURE REFLECTION_CAPTURE_AMBIENT RENDER_QUALITY=3" disableDepthStencilRT="true">
+        <execution name="ApplyEnvironmentParameters" />
+        <parameter name="GlobalRoughnessParam" value="1 1" />
+        <texture unit="0" name="GBufferA" />
+        <texture unit="1" name="GBufferB" />
+        <texture unit="2" name="GBufferC" />
+        <texture unit="3" name="GBufferD" />
+        <texture unit="7" name="GBufferE" />
+        <texture unit="4" name="CaptureDepth" />
+        <output index="0" name="CaptureLighting" />
+    </command>
+    <command type="lightvolumes" vs="PBR/StandardPBRDeferred" ps="PBR/StandardPBRDeferred"
+        psdefines="DEFERRED_CLEAR_COAT DEFERRED_BACKLIGHT DEFERRED SPLIT_LIGHTING REFLECTION_CAPTURE" disableDepthStencilRT="true" blend="add">
+        <parameter name="GlobalRoughnessParam" value="1 1" />
+        <texture unit="0" name="GBufferA" />
+        <texture unit="1" name="GBufferB" />
+        <texture unit="2" name="GBufferC" />
+        <texture unit="3" name="GBufferD" />
+        <texture unit="7" name="GBufferE" />
+        <texture unit="4" name="CaptureDepth" />
+        <output index="0" name="CaptureLighting" />
+    </command>
+    <command type="quad" vs="EnvBake/ReflectionCaptureResolve" ps="EnvBake/ReflectionCaptureResolve" output="viewport" disableDepthStencilRT="true">
+        <texture unit="0" name="CaptureLighting" />
+        <texture unit="1" name="CaptureDepth" />
+    </command>
+</renderpath>

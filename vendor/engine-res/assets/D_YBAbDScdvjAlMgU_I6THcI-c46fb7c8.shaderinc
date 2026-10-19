@@ -1,0 +1,39 @@
+// VoxelPalette.shaderinc - voxel palette addressing for custom SurfaceShaders.
+//
+// Include after shader_type:
+//     #include "res://Shaders/BLGL/Voxel/VoxelPalette.shaderinc"
+//
+// The uniforms below are written by the engine on every custom material assigned to a
+// VoxelVolume (the slot of the volume's palette bank and the atlas layout). Do not set them
+// from scripts; they follow the engine.json voxel.palette.layout setting automatically.
+// Bind the palette texture yourself:
+//     material:SetSurfaceTexture("<your sampler>", world:GetPaletteTexture())
+// and declare that sampler with filter_nearest, repeat_disable and without source_color
+// (the atlas mixes sRGB colour rows with a linear PBR row).
+
+uniform float voxel_palette_slot = 0.0;
+uniform float voxel_palette_banks_per_row = 1.0;
+uniform float voxel_palette_atlas_height = 1024.0;
+
+// Palette layers within a bank's 4-row slot.
+const float VOXEL_PALETTE_ALBEDO = 0.0;   // sRGB albedo RGBA
+const float VOXEL_PALETTE_PBR = 1.0;      // linear roughness / metallic / specular
+const float VOXEL_PALETTE_EMISSIVE = 2.0; // sRGB emissive rgb, a = intensity / 16
+const float VOXEL_PALETTE_CUT = 3.0;      // sRGB cut-face colour
+
+// Palette index byte carried by voxel vertex colour R (0..255).
+float voxel_palette_index(vec4 vertex_color) {
+    return floor(vertex_color.r * 255.0 + 0.5);
+}
+
+// Texture coordinate of palette entry `index` (0..255) in `layer` (VOXEL_PALETTE_*) for this
+// material's volume. Sample with the palette sampler.
+vec2 voxel_palette_uv(float index, float layer) {
+    float banks = max(voxel_palette_banks_per_row, 1.0);
+    float slot = floor(voxel_palette_slot + 0.5);
+    float group = floor(slot / banks);
+    float column = slot - group * banks;
+    float u = (column * 256.0 + floor(index + 0.5) + 0.5) / (banks * 256.0);
+    float v = (group * 4.0 + layer + 0.5) / voxel_palette_atlas_height;
+    return vec2(u, v);
+}

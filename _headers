@@ -1,0 +1,23 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+  Cache-Control: no-cache
+/game/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/vendor/engine/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/vendor/engine-res/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/vendor/engine-startup/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/vendor/official-res/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/vendor/urhox-libs/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/vendor/engine/assets/BWS1cZS6LOkyO4HAxy9Y2IJP-f25f19f2.data.gz
+  Content-Type: application/octet-stream
+/vendor/engine/assets/GWC84cxRDByYUkf-Vap6ep82-d1c002a2.wasm.gz
+  Content-Type: application/octet-stream
