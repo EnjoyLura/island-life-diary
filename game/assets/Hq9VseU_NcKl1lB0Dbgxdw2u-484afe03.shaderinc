@@ -1,0 +1,25 @@
+// Parameters are also used by Game.OceanMotion for floating gameplay objects.
+uniform float ocean_time = 0.0;
+uniform float wave_strength = 1.0;
+uniform vec4 wave_a = vec4(.25,.40,1.10,.32);
+uniform vec4 wave_b = vec4(-.47,.22,1.55,.16);
+uniform vec4 wave_c = vec4(.13,.17,.70,.10);
+uniform vec4 wave_warp = vec4(.082,.11,.085,.65);
+float ocean_phase(vec2 p,vec4 wave,float offset) {
+    float bend=dot(p,wave_warp.xy)-ocean_time*wave_warp.z+offset;
+    return dot(p,wave.xy)-ocean_time*wave.z+offset+sin(bend)*wave_warp.w;
+}
+vec2 ocean_phase_slope(vec2 p,vec4 wave,float offset) {
+    float bend=dot(p,wave_warp.xy)-ocean_time*wave_warp.z+offset;
+    return wave.xy+cos(bend)*wave_warp.w*wave_warp.xy;
+}
+float ocean_height(vec2 p) {
+    return wave_strength*(sin(ocean_phase(p,wave_a,0.0))*wave_a.w
+        +sin(ocean_phase(p,wave_b,1.7))*wave_b.w
+        +sin(ocean_phase(p,wave_c,.6))*wave_c.w);
+}
+vec2 ocean_slope(vec2 p) {
+    return wave_strength*(cos(ocean_phase(p,wave_a,0.0))*wave_a.w*ocean_phase_slope(p,wave_a,0.0)
+        +cos(ocean_phase(p,wave_b,1.7))*wave_b.w*ocean_phase_slope(p,wave_b,1.7)
+        +cos(ocean_phase(p,wave_c,.6))*wave_c.w*ocean_phase_slope(p,wave_c,.6));
+}

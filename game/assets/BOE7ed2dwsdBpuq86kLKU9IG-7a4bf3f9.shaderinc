@@ -1,0 +1,74 @@
+// R = exposed rock signed distance, G = submerged bank signed distance.
+// Both come from runtime triangles, in metres. B is their visible bottom depth.
+uniform sampler2D coast_data : filter_linear, repeat_disable;
+uniform sampler2D reef_data : filter_linear, repeat_disable;
+uniform float reef_span = 256.0;
+uniform float island_radius = 23.0;
+uniform float home_mode = 0.0;
+uniform float fishing_mode = 0.0;
+uniform float reef_mode = 0.0;
+// One shared village root and an independent, open mountainous coastline.
+uniform vec3 bay_home = vec3(-36.4,-34.8,.66);
+uniform vec4 mountain_frame = vec4(26.8,46.0,44.0,44.0);
+uniform sampler2D mountain_data : filter_linear, repeat_disable;
+// Matches Game.IslandShape. The inverse is analytic: affine inverse, followed
+// by an angle-dependent radial divide. No iterative per-pixel solve.
+uniform vec4 island_shape_a = vec4(.16,.4,.09,-1.1);
+uniform vec2 island_shape_b = vec2(.065,.7);
+uniform vec3 island_basis = vec3(.98,.13,1.06);
+uniform vec4 island_bed = vec4(.14,.12,.014,28.0);
+vec2 island_source(vec2 p) {
+    float z=p.y/island_basis.z;
+    float x=(p.x-island_basis.y*z)/island_basis.x;
+    if(x*x+z*z<.000001) { return vec2(0.0); }
+    float a=atan(z,x);
+    float k=1.0+island_shape_a.x*sin(2.0*a+island_shape_a.y)
+        +island_shape_a.z*sin(3.0*a+island_shape_a.w)
+        +island_shape_b.x*cos(5.0*a+island_shape_b.y);
+    return vec2(x,z)/k;
+}
+float source_coast(vec2 p) {
+    vec2 uv=vec2(p.x/54.0+.5,.5-p.y/54.0);
+    float d=(texture(coast_data,clamp(uv,vec2(0.0),vec2(1.0))).r-.5)*32.0;
+    return d+length(max(abs(p)-vec2(27.0),vec2(0.0)));
+}
+float island_coast(vec2 p) {
+    return source_coast(island_source(p));
+}
+vec2 mountain_sample_uv(vec2 p) {
+    float row=(mountain_frame.y-p.y)/mountain_frame.w;
+    float beyond=max(0.0,max(-row,row-1.0));
+    float bend=(row<0.0 ? .72 : .18)*(1.0-exp(-beyond*beyond*3.0));
+    return vec2((p.x-mountain_frame.x)/mountain_frame.z-bend,clamp(row,0.0,1.0));
+}
+float mountain_coast(vec2 p) {
+    vec2 uv=mountain_sample_uv(p);
+    float d=(texture(mountain_data,clamp(uv,vec2(0.0),vec2(1.0))).r-.5)*2.0*mountain_frame.z;
+    if(uv.x<0.0) {
+        return max(0.0,d)-uv.x*mountain_frame.z;
+    }
+    return d;
+}
+float bay_home_coast(vec2 p) {
+    return source_coast(island_source((p-bay_home.xy)/bay_home.z));
+}
+float bay_coast(vec2 p) {
+    return min(bay_home_coast(p)*bay_home.z,mountain_coast(p));
+}
+vec3 reef_coast(vec2 p) {
+    vec2 uv=vec2(p.x/reef_span+.5,.5-p.y/reef_span);
+    vec3 field=texture(reef_data,clamp(uv,vec2(0.0),vec2(1.0))).rgb;
+    vec2 d=(field.rg-vec2(.5))*16.0;
+    float outside=length(max(abs(p)-vec2(reef_span*.5),vec2(0.0)));
+    return vec3(d+vec2(outside),min(28.0,field.b*32.0+outside));
+}
+float home_bed_depth(float coast) {
+    float d=max(0.0,coast);
+    return min(island_bed.w,island_bed.x+island_bed.y*d+island_bed.z*d*d);
+}
+float water_depth(vec2 p,float coast,vec3 reef) {
+    float depth=mix(28.0,max(.28,reef.z),reef_mode);
+    depth=mix(depth,10.0+smoothstep(6.0,60.0,length(p-vec2(0.0,-9.0)))*16.0,fishing_mode);
+    depth=mix(depth,home_bed_depth(coast),home_mode);
+    return depth;
+}
