@@ -1,0 +1,5 @@
+// PNG colour bytes are sampled as data and decoded exactly once. Keep alpha
+// and numerical ocean/coast channels untouched. No source_color double path.
+vec3 cel_srgb_to_linear(vec3 c) {
+    return c*(c*(c*.305306011+.682171111)+.012522878);
+}

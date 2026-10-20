@@ -12,75 +12,107 @@
       "prefix": "."
     },
     {
-      "uuid": "A-zsQdm8V3G4kabYo5GpMLia",
-      "ext": ".json",
-      "hash": "a940e128",
-      "size": 1335,
-      "fs_path": "Textures/CelWorld/packing.json",
+      "uuid": "A7AjmQxsDV9TRuSDovPUREBy",
+      "ext": ".shader",
+      "hash": "5a9a16ef",
+      "size": 731,
+      "fs_path": "Shaders/BLGL/CrescentSprite.shader",
       "prefix": "../assets"
     },
     {
-      "uuid": "A5ePSRBlO1jyfMLnkb0zuTMz",
-      "ext": ".lua",
-      "hash": "562d36a0",
-      "size": 604,
-      "fs_path": "Game/RenderSettings.lua",
+      "uuid": "A8RmOVoPzn6vZti4dZmMwqGd",
+      "ext": ".py",
+      "hash": "3b02fc22",
+      "size": 14804,
+      "fs_path": "Art/BakeEagleFlight.py",
       "prefix": "../scripts"
     },
     {
-      "uuid": "AJLQ8YO4SXCQeUsFasWl-aUj",
+      "uuid": "AF_3SU05MWAtPSMWb7y73Z1B",
       "ext": ".lua",
-      "hash": "5e2aea77",
-      "size": 2812,
-      "fs_path": "Game/WakeTrail.lua",
+      "hash": "46f18457",
+      "size": 8873,
+      "fs_path": "Game/RenderProbe.lua",
       "prefix": "../scripts"
+    },
+    {
+      "uuid": "AHOYQcLP8Tz-k-7JMz68BC7I",
+      "ext": ".png",
+      "hash": "07790551",
+      "size": 1215525,
+      "fs_path": "Textures/CelWorld/vegetation.png",
+      "prefix": "../assets"
     },
     {
       "uuid": "AJnS0bZjYvH-K4806Ln0OY_y",
       "ext": ".lua",
-      "hash": "427d8135",
-      "size": 17721,
+      "hash": "e744bc84",
+      "size": 18187,
       "fs_path": "Game/State.lua",
       "prefix": "../scripts"
     },
     {
       "uuid": "AKA7I8bNT32fH_c6ivHbmA",
       "ext": ".json",
-      "hash": "f00a554a",
-      "size": 227,
+      "hash": "610b379c",
+      "size": 235,
       "fs_path": "resources.json",
       "prefix": "."
     },
     {
-      "uuid": "AMW_MYyG8kK7Q33kj9xj-MZv",
-      "ext": ".png",
-      "hash": "a966e5e8",
-      "size": 2623447,
-      "fs_path": "Textures/CelWorld/mountain-coast-v17.png",
+      "uuid": "AMkh0fEWtzzNJKMbvztb6ZQ9",
+      "ext": ".shaderinc",
+      "hash": "935c82d2",
+      "size": 251,
+      "fs_path": "Shaders/BLGL/CrescentColor.shaderinc",
       "prefix": "../assets"
+    },
+    {
+      "uuid": "AS9qcVbNzhwrjdxXp-qbA3IJ",
+      "ext": ".shader",
+      "hash": "3371079e",
+      "size": 618,
+      "fs_path": "Shaders/BLGL/CrescentIslandGround.shader",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "AdNL2dHTWL31qKaOJVKK7a92",
+      "ext": ".lua",
+      "hash": "eb7787fd",
+      "size": 3239,
+      "fs_path": "Game/OceanMotion.lua",
+      "prefix": "../scripts"
     },
     {
       "uuid": "AeQ4YQUaTsNa1ljluqxxI0Xi",
       "ext": ".lua",
-      "hash": "fed154e7",
-      "size": 1865,
+      "hash": "4a1716cc",
+      "size": 1902,
       "fs_path": "main.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "ApgjKQSwg3EBHd0ET_mSHfBR",
+      "uuid": "AlOLMfAie7W3bgt6pbnJFtAi",
       "ext": ".lua",
-      "hash": "007ae4c2",
-      "size": 3473,
-      "fs_path": "Game/PerformanceUI.lua",
+      "hash": "97187d17",
+      "size": 4660,
+      "fs_path": "Game/LayeredIsland.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "Ayi1waL-9Qy__PG9raWFoo32",
-      "ext": ".shader",
-      "hash": "90c30fc5",
-      "size": 499,
-      "fs_path": "Shaders/BLGL/CrescentLegacyWake.shader",
+      "uuid": "Am3iMfRSHQg2pttQOJjDzqd3",
+      "ext": ".lua",
+      "hash": "22efeda9",
+      "size": 1849,
+      "fs_path": "Game/MountainContour.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "AmFcqckQ8iNKoiQTu9fxlx51",
+      "ext": ".png",
+      "hash": "bff705e1",
+      "size": 34569,
+      "fs_path": "Textures/CelWorld/coast-data.png",
       "prefix": "../assets"
     },
     {
@@ -92,75 +124,67 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "B3S84ewlLJg4aHoGwPbn82Fz",
-      "ext": ".lua",
-      "hash": "77de6d36",
-      "size": 1091,
-      "fs_path": "Game/OceanField.lua",
-      "prefix": "../scripts"
-    },
-    {
       "uuid": "B3sEWZKrpEIglobwfWmQDU0U",
       "ext": ".lua",
-      "hash": "18731d3c",
-      "size": 12609,
+      "hash": "8873bc40",
+      "size": 12842,
       "fs_path": "Game/HUD.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "BF1RuQ7PbnZaIV7Oy4GcHK6Z",
-      "ext": ".lua",
-      "hash": "eb041d57",
-      "size": 3393,
-      "fs_path": "Game/OceanRenderer.lua",
-      "prefix": "../scripts"
+      "uuid": "B6vf8ahpbEG8qmprx3PP6kiS",
+      "ext": ".png",
+      "hash": "b2a0a029",
+      "size": 1278848,
+      "fs_path": "Textures/CelWorld/buildings.png",
+      "prefix": "../assets"
     },
     {
-      "uuid": "BIcpQZPIUA1PZA1SlN9QiIgp",
+      "uuid": "BG-LWeF30EeClSZii5XT18Wu",
       "ext": ".shader",
-      "hash": "a7467a0e",
-      "size": 784,
-      "fs_path": "Shaders/BLGL/CrescentWake.shader",
+      "hash": "507faa56",
+      "size": 1126,
+      "fs_path": "Shaders/BLGL/CrescentSeabed.shader",
       "prefix": "../assets"
     },
     {
       "uuid": "BJuXWYJyvgHUdWDsnq2HgbDg",
       "ext": ".lua",
-      "hash": "3d0a6c41",
-      "size": 6806,
+      "hash": "91025f48",
+      "size": 6926,
       "fs_path": "Game/Art.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "BTxf6XKUj83RN86LZZT8HdAV",
-      "ext": ".jpg",
-      "hash": "5bbd2d01",
-      "size": 267987,
-      "fs_path": "Textures/Crescent/OceanPaint.jpg",
+      "uuid": "BOE7ed2dwsdBpuq86kLKU9IG",
+      "ext": ".shaderinc",
+      "hash": "5151297c",
+      "size": 3169,
+      "fs_path": "Shaders/BLGL/CrescentCoast.shaderinc",
       "prefix": "../assets"
     },
     {
-      "uuid": "BUxRUcZtFylHshI7OSDslbnv",
-      "ext": ".png",
-      "hash": "cac4b6f0",
-      "size": 3935,
-      "fs_path": "Textures/CelWorld/mountain-coast-data.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "Ba5eoTobbAAAx9_0nXfG3Y1o",
+      "uuid": "BR3oiUkL2l08CpZWDWD0Xa49",
       "ext": ".shader",
-      "hash": "938d2ac7",
-      "size": 1324,
-      "fs_path": "Shaders/BLGL/CrescentRock.shader",
+      "hash": "4cfd0744",
+      "size": 919,
+      "fs_path": "Shaders/BLGL/CrescentSchool.shader",
       "prefix": "../assets"
     },
     {
-      "uuid": "BfDA4WzQe2mxYpZXaOfMZfey",
+      "uuid": "BTFjSWuN4NZa6D3HvG2JX9o6",
       "ext": ".lua",
-      "hash": "d0607a2c",
-      "size": 3564,
-      "fs_path": "Game/FishArt.lua",
+      "hash": "7d25b155",
+      "size": 13196,
+      "fs_path": "Game/Scenery.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "BcYp6aWugRJCF1CM8ECgHbJM",
+      "ext": ".lua",
+      "hash": "b79eccb2",
+      "size": 6191,
+      "fs_path": "Game/Mesh.lua",
       "prefix": "../scripts"
     },
     {
@@ -172,23 +196,31 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "Bt9n0bAbLGrQoL56h9sz5676",
-      "ext": ".png",
-      "hash": "964ddaca",
-      "size": 221819,
-      "fs_path": "Textures/Crescent/WaterFieldHome.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "BtVuOeQKRTEbzEwVWoL3eWEV",
+      "uuid": "BmFC-VAA9qL2YaPBW3PQIBXB",
       "ext": ".shader",
-      "hash": "d2eaa967",
-      "size": 1878,
-      "fs_path": "Shaders/BLGL/CrescentWater.shader",
+      "hash": "63c323d0",
+      "size": 782,
+      "fs_path": "Shaders/BLGL/CrescentSolid.shader",
       "prefix": "../assets"
     },
     {
-      "uuid": "C2qDiZV06bK2pC0_VTLb6h2l",
+      "uuid": "BuqtoVhLIGZW9kDJQN-aXhat",
+      "ext": ".shader",
+      "hash": "456897a2",
+      "size": 688,
+      "fs_path": "Shaders/BLGL/CrescentMountain.shader",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "BxaXWY74ZdL0_8qzI7xZlptf",
+      "ext": ".lua",
+      "hash": "56228a5d",
+      "size": 2887,
+      "fs_path": "Game/WakeTrail.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "C6WcsewsPt_H26MKeGtvyJ6T",
       "ext": ".shader",
       "hash": "7b56be75",
       "size": 1568,
@@ -204,28 +236,20 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "CH9BuYejbHc4SIHDElZrd5Nv",
+      "uuid": "COBk-dYQe340cy7mkeMB4yJZ",
+      "ext": ".png",
+      "hash": "0b6c3b1f",
+      "size": 103405,
+      "fs_path": "Textures/Crescent/WaterFieldBay.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "CPfm0W413eLodvzW4TW5zbHm",
       "ext": ".lua",
-      "hash": "3a83ab83",
-      "size": 3361,
-      "fs_path": "Game/CoastalShelf.lua",
+      "hash": "60b91681",
+      "size": 7962,
+      "fs_path": "Game/SeaChart.lua",
       "prefix": "../scripts"
-    },
-    {
-      "uuid": "CZPn4djuPeJ4WpR_vDjcziHN",
-      "ext": ".shaderinc",
-      "hash": "638b8c4e",
-      "size": 1892,
-      "fs_path": "Shaders/BLGL/CrescentWaterLight.shaderinc",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "Cgsu6alfLAW6cNNkaJJgWKjv",
-      "ext": ".shaderinc",
-      "hash": "ce030619",
-      "size": 3096,
-      "fs_path": "Shaders/BLGL/CrescentCoast.shaderinc",
-      "prefix": "../assets"
     },
     {
       "uuid": "Cj9dkd-qVYibRoHKF0QRk_TV",
@@ -238,49 +262,57 @@
     {
       "uuid": "ClCk2ZqQFSHCpv3sbIVx1wse",
       "ext": ".lua",
-      "hash": "e89b84a8",
-      "size": 33738,
+      "hash": "f316c943",
+      "size": 34390,
       "fs_path": "Game/Menus.lua",
       "prefix": "../scripts"
     },
     {
       "uuid": "ClQbcSAUiXT8DSH2YCdXYEKn",
       "ext": ".lua",
-      "hash": "3b1f39b5",
-      "size": 3164,
+      "hash": "19ddce94",
+      "size": 3224,
       "fs_path": "Game/Widgets.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "Cmt7eat6AuimgAz-yssJ2u0c",
+      "uuid": "CqLysZC9kldFmRzm1ZCZ8has",
       "ext": ".lua",
-      "hash": "1e30dcdc",
-      "size": 12933,
-      "fs_path": "Game/Scenery.lua",
+      "hash": "913f5a7e",
+      "size": 4389,
+      "fs_path": "Game/ReefArt.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "CophUQD_d1-Z9zddo5Gb66Lw",
+      "uuid": "Cuu6oWCcMMSdmdU0m23df2xo",
       "ext": ".shader",
-      "hash": "712cd28a",
-      "size": 671,
-      "fs_path": "Shaders/BLGL/CrescentMountain.shader",
+      "hash": "cf88e8c0",
+      "size": 512,
+      "fs_path": "Shaders/BLGL/CrescentLegacyWake.shader",
       "prefix": "../assets"
     },
     {
-      "uuid": "CweeKbt1sowl4_dNJtBo1_wN",
+      "uuid": "CxLcQcYrnZJJeNBzhGDUnr_A",
+      "ext": ".shader",
+      "hash": "c999d9cc",
+      "size": 1251,
+      "fs_path": "Shaders/BLGL/CrescentFish.shader",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "CzqKaeoxDPkvds3zKzmyr1ni",
+      "ext": ".lua",
+      "hash": "6bccb9b2",
+      "size": 832,
+      "fs_path": "Game/IslandShape.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "D2d0mTtX4wFQnnHyPmA7T9PG",
       "ext": ".shaderinc",
-      "hash": "7180df01",
-      "size": 246,
-      "fs_path": "Shaders/BLGL/CrescentColor.shaderinc",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "D5N3CWZY8hjCN1zvUaXCQZLn",
-      "ext": ".shader",
-      "hash": "aef85b94",
-      "size": 2052,
-      "fs_path": "Shaders/BLGL/CrescentCoastalShelf.shader",
+      "hash": "b137684e",
+      "size": 3281,
+      "fs_path": "Shaders/BLGL/CrescentWaterLight.shaderinc",
       "prefix": "../assets"
     },
     {
@@ -292,111 +324,63 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "DAMe6c1T5qMkvMbyXhOmEy0U",
-      "ext": ".shaderinc",
-      "hash": "484afe03",
-      "size": 1191,
-      "fs_path": "Shaders/BLGL/CrescentLegacyWaves.shaderinc",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "DUwRUQH6hYYT5ZHeh9609U8E",
+      "uuid": "DL7nsVdT2tKeJfiiTBKZcvEs",
       "ext": ".png",
-      "hash": "b2a0a029",
-      "size": 1278848,
-      "fs_path": "Textures/CelWorld/buildings.png",
+      "hash": "964ddaca",
+      "size": 221819,
+      "fs_path": "Textures/Crescent/WaterFieldHome.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "DYwqoSu0q4hnzNua5Ib2jbuQ",
+      "uuid": "DYOceVnZX9G9BNpXNXg3hXiV",
       "ext": ".lua",
-      "hash": "cddc641c",
-      "size": 4269,
-      "fs_path": "Game/ReefArt.lua",
+      "hash": "0e278bbf",
+      "size": 2348,
+      "fs_path": "Game/PerformanceStats.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "DhgQsUz9vYgBdtt1hcDPEEFj",
+      "uuid": "DjJoAVfaT_hX4WnPN5-2NkDY",
+      "ext": ".lua",
+      "hash": "7e05c401",
+      "size": 28558,
+      "fs_path": "Game/Scene3D.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "Dqm5QXSvN0W6J1DMbO085HW3",
       "ext": ".shader",
-      "hash": "7b645618",
-      "size": 535,
+      "hash": "4ce85fbc",
+      "size": 726,
       "fs_path": "Shaders/BLGL/CrescentDeepWater.shader",
       "prefix": "../assets"
     },
     {
-      "uuid": "Dn3M2b-XD2s-1ZbmbQiIuqX5",
-      "ext": ".png",
-      "hash": "30af68fc",
-      "size": 2424540,
-      "fs_path": "Textures/CelWorld/shore-shelf.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "DvlawZ296r2v1YVmSTMEVbn2",
+      "uuid": "DwLJeRALa_MdM4UiIDCBdHTA",
       "ext": ".lua",
-      "hash": "225072fc",
-      "size": 267691,
-      "fs_path": "Game/OceanFieldData.lua",
+      "hash": "d7a66b48",
+      "size": 1118,
+      "fs_path": "Game/OceanField.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "DxMDeT-8gM9ms3ZnPurk8kET",
-      "ext": ".shader",
-      "hash": "c4245ef6",
-      "size": 763,
-      "fs_path": "Shaders/BLGL/CrescentSolid.shader",
+      "uuid": "Dwa2qUvX-ntToApZKFmlXc4c",
+      "ext": ".json",
+      "hash": "a940e128",
+      "size": 1335,
+      "fs_path": "Textures/CelWorld/packing.json",
       "prefix": "../assets"
-    },
-    {
-      "uuid": "E2HnuWSky2_2vloVgbonk6x4",
-      "ext": ".lua",
-      "hash": "68609230",
-      "size": 808,
-      "fs_path": "Game/IslandShape.lua",
-      "prefix": "../scripts"
     },
     {
       "uuid": "E8G4Yd-R6bv90WK8J-DKXiqT",
       "ext": ".lua",
-      "hash": "461a8bb8",
-      "size": 33546,
+      "hash": "784dcb5c",
+      "size": 34231,
       "fs_path": "Game/World.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "E8pYscXkrKkX4rXR4lc6SH9Y",
-      "ext": ".shader",
-      "hash": "58dda440",
-      "size": 4381,
-      "fs_path": "Shaders/BLGL/CrescentLegacyWater.shader",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "EACvybkEBusSLDxmS7PIyNBd",
-      "ext": ".shader",
-      "hash": "c9e1385f",
-      "size": 899,
-      "fs_path": "Shaders/BLGL/CrescentSchool.shader",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "EHo94Qj-AXeZHXzdhxw8Fzt4",
-      "ext": ".shader",
-      "hash": "0a01de3b",
-      "size": 1104,
-      "fs_path": "Shaders/BLGL/CrescentSeabed.shader",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "EtWlqR_zh3dA9_UzyXKt53lC",
-      "ext": ".shader",
-      "hash": "194520fa",
-      "size": 1223,
-      "fs_path": "Shaders/BLGL/CrescentFish.shader",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "EuTxiVazW8c0tBtV6Scy0YRS",
+      "uuid": "ED3iqclSBbe8GcmMllphrQRR",
       "ext": ".png",
       "hash": "44888803",
       "size": 41447,
@@ -404,74 +388,90 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "EuqxOeFlsB57v0QwXamwCvGE",
-      "ext": ".lua",
-      "hash": "d3e698e9",
-      "size": 478,
-      "fs_path": "Game/IslandLayout.lua",
-      "prefix": "../scripts"
-    },
-    {
-      "uuid": "F5Kg2fnsw5wE_8vmOxtxAIya",
-      "ext": ".lua",
-      "hash": "0e1bf8bf",
-      "size": 8726,
-      "fs_path": "Game/RenderProbe.lua",
-      "prefix": "../scripts"
-    },
-    {
-      "uuid": "FCcvkTraGwx--qwb9JaCVLn3",
+      "uuid": "ELFAgc4bnotBttFwhRxGWumi",
       "ext": ".jpg",
-      "hash": "f319e8af",
-      "size": 416930,
-      "fs_path": "Textures/Crescent/SeabedSand.jpg",
+      "hash": "5bbd2d01",
+      "size": 267987,
+      "fs_path": "Textures/Crescent/OceanPaint.jpg",
       "prefix": "../assets"
     },
     {
-      "uuid": "FE4pWexotMbQVOMFSsJXhoTi",
+      "uuid": "ERX7KaDNcqamxGbbLU2oiJ01",
+      "ext": ".png",
+      "hash": "b57386d3",
+      "size": 246644,
+      "fs_path": "Textures/Crescent/OceanData.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "E_B0UXAGRBeareB2dY4u6yuT",
       "ext": ".lua",
-      "hash": "00fcbb77",
-      "size": 6046,
-      "fs_path": "Game/Bay.lua",
+      "hash": "04d2d5d6",
+      "size": 3533,
+      "fs_path": "Game/PerformanceUI.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "FFzg0REkCm8SWWdRpXFXFzuO",
+      "uuid": "EaqUGa8FCSlz2KlAMHtgaoak",
       "ext": ".png",
-      "hash": "bff705e1",
-      "size": 34569,
-      "fs_path": "Textures/CelWorld/coast-data.png",
+      "hash": "30af68fc",
+      "size": 2424540,
+      "fs_path": "Textures/CelWorld/shore-shelf.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "EbfueQCHpnNL-kSE-j93YscY",
+      "ext": ".shader",
+      "hash": "4f92c0ad",
+      "size": 1351,
+      "fs_path": "Shaders/BLGL/CrescentRock.shader",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "EkNPEWUNgvSB-oXD3YiDz61_",
+      "ext": ".lua",
+      "hash": "0a08ca5d",
+      "size": 615,
+      "fs_path": "Game/RenderSettings.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "Ey_LccXGqAd33-MhJDGphjCD",
+      "ext": ".lua",
+      "hash": "225072fc",
+      "size": 267691,
+      "fs_path": "Game/OceanFieldData.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "F3i4yduhFsKNte1rHepIVHaZ",
+      "ext": ".png",
+      "hash": "a966e5e8",
+      "size": 2623447,
+      "fs_path": "Textures/CelWorld/mountain-coast-v17.png",
       "prefix": "../assets"
     },
     {
       "uuid": "FLRlIeTW-0szSxW70DywT9Ec",
       "ext": ".lua",
-      "hash": "c5ffe1ec",
-      "size": 7927,
+      "hash": "21b078ac",
+      "size": 8043,
       "fs_path": "Game/Catalog.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "FS4wGS-OQs5eWARtUUA8T8m2",
-      "ext": ".png",
-      "hash": "07790551",
-      "size": 1215525,
-      "fs_path": "Textures/CelWorld/vegetation.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "FVoZ-ayWzmFQjRQKHl_mrGlF",
+      "uuid": "FTwOca8L6tLs7GbXKPIqmEWs",
       "ext": ".lua",
-      "hash": "c71bf522",
-      "size": 4566,
-      "fs_path": "Game/LayeredIsland.lua",
+      "hash": "ca4d914b",
+      "size": 6493,
+      "fs_path": "Game/CoastContour.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "Faqk0XJeaEoOjdoDBzOyUWkR",
+      "uuid": "FYIHmVdo_fDOGfLjAUfKiSdr",
       "ext": ".lua",
-      "hash": "94d3f613",
-      "size": 1870,
+      "hash": "13090c34",
+      "size": 1918,
       "fs_path": "Game/OceanMotionLegacy.lua",
       "prefix": "../scripts"
     },
@@ -484,6 +484,14 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "Fo2laUMRjqIgxNzvHnek0ft3",
+      "ext": ".shader",
+      "hash": "cfde4ab6",
+      "size": 801,
+      "fs_path": "Shaders/BLGL/CrescentWake.shader",
+      "prefix": "../assets"
+    },
+    {
       "uuid": "FwsHqcQK7njCe9uzrcbJPKft",
       "ext": ".jpg",
       "hash": "6fcb9d89",
@@ -492,52 +500,52 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "FxDl0ZAmdck4rgKD8sSLH5wP",
+      "uuid": "G98VKerP2GeZ232cctyAjPrp",
       "ext": ".lua",
-      "hash": "f654732f",
-      "size": 2428,
-      "fs_path": "Game/OceanMotion.lua",
+      "hash": "3e744eaa",
+      "size": 489,
+      "fs_path": "Game/IslandLayout.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "G1Nl6SHqhRC7Pyiqk0Lj3nDc",
+      "uuid": "GD02UQTEqkpVLq78Cq7D33TG",
       "ext": ".lua",
-      "hash": "22efeda9",
-      "size": 1849,
-      "fs_path": "Game/MountainContour.lua",
+      "hash": "c9198087",
+      "size": 6180,
+      "fs_path": "Game/Bay.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "GT5bAfuodAMsKC8TXxTOQ4mA",
+      "uuid": "GEbDefXUuySZ0Ne3bel-nDzR",
       "ext": ".lua",
-      "hash": "188f25db",
-      "size": 2302,
-      "fs_path": "Game/PerformanceStats.lua",
+      "hash": "27370092",
+      "size": 3456,
+      "fs_path": "Game/OceanRenderer.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "GbeYyV1fXmdt37VK8XodsUfr",
-      "ext": ".shader",
-      "hash": "7b1d43df",
-      "size": 603,
-      "fs_path": "Shaders/BLGL/CrescentIslandGround.shader",
+      "uuid": "GH_SaajNydCBbvA-lvsvCsat",
+      "ext": ".png",
+      "hash": "56352c0a",
+      "size": 1841569,
+      "fs_path": "Textures/Crescent/ReefStone.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "GbyMoQdexIK9f2kPami_CaCq",
-      "ext": ".lua",
-      "hash": "e5962a52",
-      "size": 6051,
-      "fs_path": "Game/Mesh.lua",
-      "prefix": "../scripts"
+      "uuid": "GSXr4Zc0PsD9EIOAm8_Q1R6u",
+      "ext": ".shader",
+      "hash": "5bf468ca",
+      "size": 2092,
+      "fs_path": "Shaders/BLGL/CrescentCoastalShelf.shader",
+      "prefix": "../assets"
     },
     {
-      "uuid": "Ge40wawWihaNdNpG0QlFugSJ",
-      "ext": ".lua",
-      "hash": "ca4d914b",
-      "size": 6493,
-      "fs_path": "Game/CoastContour.lua",
-      "prefix": "../scripts"
+      "uuid": "GVAUeWPnC_wnBTbICR8FO5j5",
+      "ext": ".png",
+      "hash": "898886bd",
+      "size": 2504186,
+      "fs_path": "Textures/CelWorld/terrain.png",
+      "prefix": "../assets"
     },
     {
       "uuid": "GgDPgWeA5fM_OGhqRNIOKaU7",
@@ -550,73 +558,73 @@
     {
       "uuid": "GwuHoTG00fPAfC4mvpQo0vka",
       "ext": ".lua",
-      "hash": "3a39fde5",
-      "size": 28178,
+      "hash": "533d0ea6",
+      "size": 28752,
       "fs_path": "Game/App.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "GzZcuaq5LQSTGPcjiUGC3BeS",
-      "ext": ".png",
-      "hash": "b57386d3",
-      "size": 246644,
-      "fs_path": "Textures/Crescent/OceanData.png",
+      "uuid": "Gxby8fF0NxQTWpm5_Z0ipzjA",
+      "ext": ".lua",
+      "hash": "64c92a5b",
+      "size": 3452,
+      "fs_path": "Game/CoastalShelf.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "HH6Hea4TIbcaOCCXijFGHCP_",
+      "ext": ".shader",
+      "hash": "d02ea2e8",
+      "size": 2445,
+      "fs_path": "Shaders/BLGL/CrescentWater.shader",
       "prefix": "../assets"
     },
     {
-      "uuid": "H7Deyb5jnb-NoHmNKEUrWtym",
-      "ext": ".png",
-      "hash": "56352c0a",
-      "size": 1841569,
-      "fs_path": "Textures/Crescent/ReefStone.png",
+      "uuid": "HIcQsa_iO4fzV8WR0WVTmmju",
+      "ext": ".jpg",
+      "hash": "f319e8af",
+      "size": 416930,
+      "fs_path": "Textures/Crescent/SeabedSand.jpg",
       "prefix": "../assets"
     },
     {
-      "uuid": "HEUi-VQdULh3DoCUK8vOohQ4",
-      "ext": ".png",
-      "hash": "898886bd",
-      "size": 2504186,
-      "fs_path": "Textures/CelWorld/terrain.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "HRSGYXKobr5jZIOD_22t2dHO",
+      "uuid": "HR_9GScbkiljESdXS3__G4Qp",
       "ext": ".shaderinc",
-      "hash": "096aba99",
-      "size": 1958,
+      "hash": "ca079df4",
+      "size": 2356,
       "fs_path": "Shaders/BLGL/CrescentWaves.shaderinc",
       "prefix": "../assets"
     },
     {
-      "uuid": "HaGvKTACiLUYyZ_IwGuiMZa_",
-      "ext": ".lua",
-      "hash": "e3d34ac7",
-      "size": 7796,
-      "fs_path": "Game/SeaChart.lua",
-      "prefix": "../scripts"
-    },
-    {
-      "uuid": "HeRhWSPe6ygiFtX8fI7Hm6U6",
-      "ext": ".lua",
-      "hash": "ee5649d4",
-      "size": 27843,
-      "fs_path": "Game/Scene3D.lua",
-      "prefix": "../scripts"
-    },
-    {
-      "uuid": "HqDX6alwTHoha7hJmaCsUOXu",
-      "ext": ".shader",
-      "hash": "4ae39cf4",
-      "size": 712,
-      "fs_path": "Shaders/BLGL/CrescentSprite.shader",
+      "uuid": "HcxdOev-lBmUOKO2xQ-P7gdf",
+      "ext": ".png",
+      "hash": "cac4b6f0",
+      "size": 3935,
+      "fs_path": "Textures/CelWorld/mountain-coast-data.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "HuaB2c1dEjJpdTeDk7O_RmeG",
-      "ext": ".png",
-      "hash": "0b6c3b1f",
-      "size": 103405,
-      "fs_path": "Textures/Crescent/WaterFieldBay.png",
+      "uuid": "HmoaqR4L3YAn4cSh_uUOh9je",
+      "ext": ".shader",
+      "hash": "bca63684",
+      "size": 4466,
+      "fs_path": "Shaders/BLGL/CrescentLegacyWater.shader",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "HozJqUcbpLjW7NRCw_Gmg_TO",
+      "ext": ".lua",
+      "hash": "a65522fc",
+      "size": 3626,
+      "fs_path": "Game/FishArt.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "Hq9VseU_NcKl1lB0Dbgxdw2u",
+      "ext": ".shaderinc",
+      "hash": "3748d464",
+      "size": 1216,
+      "fs_path": "Shaders/BLGL/CrescentLegacyWaves.shaderinc",
       "prefix": "../assets"
     },
     {
@@ -637,7 +645,7 @@
     }
   ],
   "metadata": {
-    "total_files": 79,
-    "total_size": 27531175
+    "total_files": 80,
+    "total_size": 27555008
   }
 }

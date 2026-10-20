@@ -1,0 +1,16 @@
+{
+  "$schema": "../schemas/resources.schema.json",
+
+  "preload_groups": [
+    "shader-startup"
+  ],
+
+  "groups": {
+    "default": [
+      "**"
+    ],
+    "shader-startup": [
+      "Shaders/BLGL/*.shaderinc"
+    ]
+  }
+}

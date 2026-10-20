@@ -1,0 +1,89 @@
+{
+  "source": "built-in image_gen",
+  "terrainSpanMetres": 54,
+  "distanceEncoding": "R: .5 + signed metres / 32; positive = water; linear data",
+  "buildings": [
+    {
+      "cell": 1,
+      "pixels": [
+        28,
+        28,
+        455,
+        456
+      ],
+      "rootV": 0.9453125
+    },
+    {
+      "cell": 2,
+      "pixels": [
+        543,
+        28,
+        449,
+        456
+      ],
+      "rootV": 0.9453125
+    },
+    {
+      "cell": 3,
+      "pixels": [
+        93,
+        540,
+        325,
+        456
+      ],
+      "rootV": 0.9453125
+    },
+    {
+      "cell": 4,
+      "pixels": [
+        551,
+        540,
+        434,
+        456
+      ],
+      "rootV": 0.9453125
+    }
+  ],
+  "vegetation": [
+    {
+      "cell": 1,
+      "pixels": [
+        28,
+        56,
+        456,
+        428
+      ],
+      "rootV": 0.9453125
+    },
+    {
+      "cell": 2,
+      "pixels": [
+        586,
+        28,
+        363,
+        456
+      ],
+      "rootV": 0.9453125
+    },
+    {
+      "cell": 3,
+      "pixels": [
+        28,
+        589,
+        456,
+        407
+      ],
+      "rootV": 0.9453125
+    },
+    {
+      "cell": 4,
+      "pixels": [
+        540,
+        627,
+        456,
+        369
+      ],
+      "rootV": 0.9453125
+    }
+  ]
+}

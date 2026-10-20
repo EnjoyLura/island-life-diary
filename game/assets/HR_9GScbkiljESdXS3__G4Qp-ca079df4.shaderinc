@@ -1,0 +1,48 @@
+// Shared with Game.OceanMotion. No wave trigonometry in the water fragment.
+uniform float ocean_time = 0.0;
+uniform float wave_strength = 1.0;
+uniform float wave_steepness = .38;
+uniform vec4 wave_a = vec4(.19,.26,1.07,.34);
+uniform vec4 wave_b = vec4(-.32,.18,1.22,.15);
+uniform vec4 wave_c = vec4(.12,-.17,.81,.10);
+void gerstner_surface(vec2 p,vec4 w,float offset,float damping,
+                     inout vec3 displacement,inout vec3 tx,inout vec3 tz) {
+    float phase=dot(p,w.xy)-ocean_time*w.z+offset;
+    float a=w.w*wave_strength*damping;
+    vec2 d=normalize(w.xy);
+    float s=sin(phase);float c=cos(phase);
+    displacement+=vec3(d.x*wave_steepness*a*c,a*s,d.y*wave_steepness*a*c);
+    vec3 derivative=vec3(-d.x*wave_steepness*a*s,a*c,-d.y*wave_steepness*a*s);
+    tx+=derivative*w.x;
+    tz+=derivative*w.y;
+}
+// One sine/cosine pair per wave supplies position and both normal tangents.
+void ocean_surface(vec2 p,float damping,out vec3 displacement,out vec3 normal) {
+    displacement=vec3(0.0);
+    vec3 tx=vec3(1.0,0.0,0.0);
+    vec3 tz=vec3(0.0,0.0,1.0);
+    gerstner_surface(p,wave_a,0.0,damping,displacement,tx,tz);
+    gerstner_surface(p,wave_b,1.7,damping,displacement,tx,tz);
+    gerstner_surface(p,wave_c,.6,damping,displacement,tx,tz);
+    normal=normalize(cross(tz,tx));
+}
+vec2 gerstner_horizontal(vec2 p,vec4 w,float offset,float damping) {
+    float phase=dot(p,w.xy)-ocean_time*w.z+offset;
+    return normalize(w.xy)*(wave_steepness*w.w*wave_strength*damping*cos(phase));
+}
+vec2 ocean_horizontal(vec2 p,float damping) {
+    return gerstner_horizontal(p,wave_a,0.0,damping)+gerstner_horizontal(p,wave_b,1.7,damping)+gerstner_horizontal(p,wave_c,.6,damping);
+}
+float gerstner_height(vec2 p,vec4 w,float offset,float damping) {
+    return w.w*wave_strength*damping*sin(dot(p,w.xy)-ocean_time*w.z+offset);
+}
+// World-space inverse for tiny wakes/fish overlays, never per water fragment.
+float ocean_height_at(vec2 p,float damping) {
+    vec2 q=p;
+    q=p-ocean_horizontal(q,damping);
+    q=p-ocean_horizontal(q,damping);
+    q=p-ocean_horizontal(q,damping);
+    q=p-ocean_horizontal(q,damping);
+    return gerstner_height(q,wave_a,0.0,damping)+gerstner_height(q,wave_b,1.7,damping)+gerstner_height(q,wave_c,.6,damping);
+}
+float ocean_height(vec2 p) { return ocean_height_at(p,1.0); }
