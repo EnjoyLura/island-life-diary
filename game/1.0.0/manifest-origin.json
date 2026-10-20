@@ -30,8 +30,8 @@
     {
       "uuid": "AF_3SU05MWAtPSMWb7y73Z1B",
       "ext": ".lua",
-      "hash": "4bb62eaf",
-      "size": 8873,
+      "hash": "78bd31cd",
+      "size": 9043,
       "fs_path": "Game/RenderProbe.lua",
       "prefix": "../scripts"
     },
@@ -212,14 +212,6 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "BvDo4eTAxdI8nVv3Nt4ZTZpH",
-      "ext": ".png",
-      "hash": "1b63f697",
-      "size": 238931,
-      "fs_path": "Textures/Crescent/WaterWaves.png",
-      "prefix": "../assets"
-    },
-    {
       "uuid": "BxaXWY74ZdL0_8qzI7xZlptf",
       "ext": ".lua",
       "hash": "56228a5d",
@@ -350,8 +342,8 @@
     {
       "uuid": "DjJoAVfaT_hX4WnPN5-2NkDY",
       "ext": ".lua",
-      "hash": "f0a7b8da",
-      "size": 28706,
+      "hash": "e07396c3",
+      "size": 29583,
       "fs_path": "Game/Scene3D.lua",
       "prefix": "../scripts"
     },
@@ -414,8 +406,8 @@
     {
       "uuid": "E_B0UXAGRBeareB2dY4u6yuT",
       "ext": ".lua",
-      "hash": "04d2d5d6",
-      "size": 3533,
+      "hash": "1999bfcf",
+      "size": 3834,
       "fs_path": "Game/PerformanceUI.lua",
       "prefix": "../scripts"
     },
@@ -438,8 +430,8 @@
     {
       "uuid": "EkNPEWUNgvSB-oXD3YiDz61_",
       "ext": ".lua",
-      "hash": "0a08ca5d",
-      "size": 615,
+      "hash": "5b359132",
+      "size": 829,
       "fs_path": "Game/RenderSettings.lua",
       "prefix": "../scripts"
     },
@@ -466,6 +458,14 @@
       "size": 8043,
       "fs_path": "Game/Catalog.lua",
       "prefix": "../scripts"
+    },
+    {
+      "uuid": "FTFl4dJbkv4P1jY4rUOZkOXq",
+      "ext": ".png",
+      "hash": "1b63f697",
+      "size": 238931,
+      "fs_path": "Textures/Crescent/WaterWaves.png",
+      "prefix": "../assets"
     },
     {
       "uuid": "FTwOca8L6tLs7GbXKPIqmEWs",
@@ -604,6 +604,14 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "Hb21qQoqVD9nKuA5ZBI4hHQV",
+      "ext": ".lua",
+      "hash": "411acd04",
+      "size": 4967,
+      "fs_path": "Game/SceneTarget.lua",
+      "prefix": "../scripts"
+    },
+    {
       "uuid": "HcxdOev-lBmUOKO2xQ-P7gdf",
       "ext": ".png",
       "hash": "cac4b6f0",
@@ -653,7 +661,7 @@
     }
   ],
   "metadata": {
-    "total_files": 81,
-    "total_size": 27794270
+    "total_files": 82,
+    "total_size": 27800799
   }
 }

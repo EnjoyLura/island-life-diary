@@ -8,7 +8,11 @@
  window.WASM_PLAYER_CONFIG={verbose:false};
  const requestedFps=Number(url.searchParams.get('fps'));
  const reportFps=requestedFps>=30&&requestedFps<=120?Math.floor(requestedFps):60;
- window.Module={arguments:['-skip_login','-hostpacing','-reporthost=public-web','-fps='+reportFps]};
+ const scale=Number(url.searchParams.get('worldscale'));
+ const worldScale=[.5,.75,1].includes(scale)?scale:1;
+ const args=['-skip_login','-hostpacing','-reporthost=public-web','-fps='+reportFps,'-worldscale='+worldScale];
+ if(url.searchParams.get('ocean')==='off')args.push('-ocean=off');
+ window.Module={arguments:args};
  const originalFetch=window.fetch.bind(window);
  // Built-in source URLs use the vendor's public CDN; keep those requests on
  // this site's mirrored dependencies so a game load has one hosting origin.
