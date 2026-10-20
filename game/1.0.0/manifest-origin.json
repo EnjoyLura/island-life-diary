@@ -236,14 +236,6 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "C4fMUWphNEK4BSscqTOJQYUM",
-      "ext": ".lua",
-      "hash": "ff710f2b",
-      "size": 726,
-      "fs_path": "Game/SharkPatrol.lua",
-      "prefix": "../scripts"
-    },
-    {
       "uuid": "C6WcsewsPt_H26MKeGtvyJ6T",
       "ext": ".shader",
       "hash": "5e28217e",
@@ -354,6 +346,14 @@
       "size": 714920,
       "fs_path": "image/crescent/island.jpg",
       "prefix": "../assets"
+    },
+    {
+      "uuid": "DBPviQp5E77aIrvltuhQiq8Q",
+      "ext": ".lua",
+      "hash": "ff710f2b",
+      "size": 726,
+      "fs_path": "Game/SharkPatrol.lua",
+      "prefix": "../scripts"
     },
     {
       "uuid": "DBZw2RYpNt3jDVXCYsp7ybNq",
