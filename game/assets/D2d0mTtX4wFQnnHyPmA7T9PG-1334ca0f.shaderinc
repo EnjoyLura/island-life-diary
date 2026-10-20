@@ -1,0 +1,102 @@
+// Fresnel helper adapted from Tidewater src/ocean/WaterMaterial.js (MIT).
+// Copyright (c) 2026 DRG Software Solutions LLC
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+uniform sampler2D wave_data : filter_linear_mipmap, repeat_enable;
+uniform float chart_mode = 0.0;
+uniform float home_mode = 0.0;
+uniform float fishing_mode = 0.0;
+// xyz points toward an orthographic camera; w=0 selects perspective instead.
+uniform vec4 water_view = vec4(0.0,1.0,0.0,0.0);
+varying vec3 water_normal;
+varying float water_crest;
+varying vec4 water_depth_plane;
+// Device clip z=(a*z+b)/(c*z+d). Handles ortho, perspective and reversed Z
+// without the perspective-only compatibility inverse or a fragment matrix multiply.
+float water_view_depth(float clip_z,vec4 plane) {
+    return abs((plane.y-plane.w*clip_z)/(plane.z*clip_z-plane.x));
+}
+float water_path_length(float scene_z,float surface_z,float view_up,float ray_down) {
+    return max(scene_z-surface_z,0.0)*max(view_up,.03)/max(ray_down,.15);
+}
+float water_fresnel(float cosine) {
+    float c=clamp(cosine,0.0,1.0);
+    float g=sqrt(1.333*1.333-1.0+c*c);
+    float a=(g-c)/(g+c);
+    float b=(c*(g+c)-1.0)/(c*(g-c)+1.0);
+    return .5*a*a*(b*b+1.0);
+}
+vec3 water_scatter() { return cel_srgb_to_linear(vec3(.055,.38,.43)); }
+vec3 water_transmission(vec3 source,float path_length) {
+    // Coastal seawater: selective absorption plus suspended fine particles.
+    // A longer path loses bottom contrast continuously, without a depth band.
+    vec3 extinction=exp(-vec3(.46,.20,.15)*max(path_length,0.0));
+    return source*extinction+water_scatter()*(vec3(1.0)-extinction);
+}
+// Two texture samples, shared by optics and foam; no fragment wave synthesis.
+vec4 water_light(vec3 position,vec3 base_normal,float crest_height,vec3 camera_position,
+                 float depth,out vec3 foam_data,out vec3 optical_normal) {
+    vec2 p=position.xz;
+    vec4 a=texture(wave_data,p*.022-vec2(ocean_time*.011,ocean_time*.016));
+    vec2 rotated=vec2(.94*p.x-.342*p.y,.342*p.x+.94*p.y);
+    vec4 b=texture(wave_data,rotated*.065-vec2(ocean_time*.008,ocean_time*.014));
+    vec2 fine=b.rg-.5;
+    fine=vec2(.94*fine.x+.342*fine.y,-.342*fine.x+.94*fine.y);
+    float footprint=length(fwidth(p));
+    float fine_detail=1.0-smoothstep(.08,.55,footprint);
+    float broad_detail=1.0-smoothstep(.35,1.8,footprint);
+    // Fine slopes change reflected/refracted light, never paint blue cells.
+    vec2 ripple=(a.rg-.5)*.64*broad_detail+fine*.32*fine_detail;
+    vec3 n=normalize(base_normal-vec3(ripple.x,0.0,ripple.y));
+    vec3 view=water_view.xyz;
+    if(water_view.w<.5) { view=normalize(camera_position-position); }
+    // Bend facets facing away toward grazing, rather than flipping to a sky patch.
+    n=normalize(n+view*max(.03-dot(n,view),0.0));
+    optical_normal=n;
+    float facing=clamp(dot(n,view),0.0,1.0);
+    float fresnel=water_fresnel(facing);
+    vec3 reflected=reflect(-view,n);
+    float horizon=smoothstep(-.12,.08,reflected.y);
+    vec3 sky=cel_srgb_to_linear(mix(vec3(.66,.82,.89),vec3(.19,.46,.72),clamp(reflected.y,0.0,1.0)));
+    sky=mix(water_scatter()*.55,sky,horizon);
+    vec3 half_light=normalize(view+normalize(vec3(-.50,.84,-.20)));
+    // Unresolved wind slopes broaden the highlight; resolved ridges retain shape.
+    float roughness=mix(.16,.25,smoothstep(.30,.70,a.a));
+    roughness=mix(roughness,.28,1.0-fine_detail);
+    float r2=roughness*roughness;
+    float nh=max(dot(n,half_light),0.0);
+    float lobe=1.0+nh*nh*(r2-1.0);
+    float glint=.0018*r2/(lobe*lobe);
+    // Soft shoulder avoids broad, flat white patches in the portrait view.
+    glint=glint/(1.0+glint/.045);
+    float back=clamp(dot(normalize(view.xz+vec2(.00001)),normalize(vec2(.50,.20))),0.0,1.0);
+    float ridge=smoothstep(.48,.84,a.b)*smoothstep(.38,.72,a.a)*broad_detail;
+    float transmission=(max(crest_height,0.0)*(1.0-facing)+ridge*.16)
+        *broad_detail*(.35+.65*back*back);
+    vec3 radiance=mix(water_scatter(),sky,fresnel)+vec3(glint)+vec3(.008,.12,.08)*transmission;
+    float breakup=a.a*.65+b.a*.35;
+    float noise_width=max(.035,fwidth(breakup));
+    // Whitecaps occupy the tips of short wind waves inside a swell crest;
+    // a broad height mask alone made diffuse white blobs.
+    float tip_width=max(.015,fwidth(b.b));
+    float tips=smoothstep(.59-tip_width,.73+tip_width,b.b);
+    float crest=smoothstep(.23,.42,crest_height)
+        *smoothstep(.57-noise_width,.69+noise_width,breakup)*tips*broad_detail;
+    float foam=crest*.16*(1.0-chart_mode*.65)*(1.0-home_mode*.5);
+    radiance=mix(radiance,cel_srgb_to_linear(vec3(.85,.96,1.0)),foam);
+    foam_data=vec3(breakup,a.b,foam);
+    return vec4(radiance,fresnel);
+}

@@ -30,8 +30,8 @@
     {
       "uuid": "AF_3SU05MWAtPSMWb7y73Z1B",
       "ext": ".lua",
-      "hash": "cd7ac0be",
-      "size": 10541,
+      "hash": "b89509f9",
+      "size": 10546,
       "fs_path": "Game/RenderProbe.lua",
       "prefix": "../scripts"
     },
@@ -68,14 +68,6 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "ARo3YUMSA4p1c4Qs1ZYk8day",
-      "ext": ".lua",
-      "hash": "7a3a2907",
-      "size": 5041,
-      "fs_path": "Game/SceneTarget.lua",
-      "prefix": "../scripts"
-    },
-    {
       "uuid": "AS9qcVbNzhwrjdxXp-qbA3IJ",
       "ext": ".shader",
       "hash": "3371079e",
@@ -86,8 +78,8 @@
     {
       "uuid": "AdNL2dHTWL31qKaOJVKK7a92",
       "ext": ".lua",
-      "hash": "6d4769be",
-      "size": 3347,
+      "hash": "6d8e23ff",
+      "size": 3509,
       "fs_path": "Game/OceanMotion.lua",
       "prefix": "../scripts"
     },
@@ -148,10 +140,18 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "BAFuCQF8GOC3Ofv_j2uYe0IQ",
+      "ext": ".png",
+      "hash": "1b63f697",
+      "size": 238931,
+      "fs_path": "Textures/Crescent/WaterWaves.png",
+      "prefix": "../assets"
+    },
+    {
       "uuid": "BG-LWeF30EeClSZii5XT18Wu",
       "ext": ".shader",
-      "hash": "152aedc4",
-      "size": 1050,
+      "hash": "584aec1a",
+      "size": 1047,
       "fs_path": "Shaders/BLGL/CrescentSeabed.shader",
       "prefix": "../assets"
     },
@@ -318,8 +318,8 @@
     {
       "uuid": "D2d0mTtX4wFQnnHyPmA7T9PG",
       "ext": ".shaderinc",
-      "hash": "ed259d5d",
-      "size": 4973,
+      "hash": "1334ca0f",
+      "size": 5806,
       "fs_path": "Shaders/BLGL/CrescentWaterLight.shaderinc",
       "prefix": "../assets"
     },
@@ -346,14 +346,6 @@
       "size": 2348,
       "fs_path": "Game/PerformanceStats.lua",
       "prefix": "../scripts"
-    },
-    {
-      "uuid": "DeK7kcbeyR-wxujZi1e46DWz",
-      "ext": ".xml",
-      "hash": "a7fbb842",
-      "size": 1406,
-      "fs_path": "RenderPaths/CrescentForward.xml",
-      "prefix": "../assets"
     },
     {
       "uuid": "DjJoAVfaT_hX4WnPN5-2NkDY",
@@ -420,6 +412,14 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "ES0DERdLX1UeB9t7JCmsMFve",
+      "ext": ".lua",
+      "hash": "7a3a2907",
+      "size": 5041,
+      "fs_path": "Game/SceneTarget.lua",
+      "prefix": "../scripts"
+    },
+    {
       "uuid": "E_B0UXAGRBeareB2dY4u6yuT",
       "ext": ".lua",
       "hash": "479017fd",
@@ -438,8 +438,8 @@
     {
       "uuid": "EbfueQCHpnNL-kSE-j93YscY",
       "ext": ".shader",
-      "hash": "27a77b87",
-      "size": 1275,
+      "hash": "23e324f8",
+      "size": 1272,
       "fs_path": "Shaders/BLGL/CrescentRock.shader",
       "prefix": "../assets"
     },
@@ -534,7 +534,7 @@
     {
       "uuid": "GEbDefXUuySZ0Ne3bel-nDzR",
       "ext": ".lua",
-      "hash": "27370092",
+      "hash": "6be7bf02",
       "size": 3456,
       "fs_path": "Game/OceanRenderer.lua",
       "prefix": "../scripts"
@@ -548,10 +548,18 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "GM-Tyd-OcqyLTnaynASnQuvt",
+      "ext": ".xml",
+      "hash": "a7fbb842",
+      "size": 1406,
+      "fs_path": "RenderPaths/CrescentForward.xml",
+      "prefix": "../assets"
+    },
+    {
       "uuid": "GSXr4Zc0PsD9EIOAm8_Q1R6u",
       "ext": ".shader",
-      "hash": "ebde968d",
-      "size": 2016,
+      "hash": "1e017992",
+      "size": 2013,
       "fs_path": "Shaders/BLGL/CrescentCoastalShelf.shader",
       "prefix": "../assets"
     },
@@ -588,18 +596,10 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "H-OleTUId7OO5cX6xjC6rpOb",
-      "ext": ".png",
-      "hash": "1b63f697",
-      "size": 238931,
-      "fs_path": "Textures/Crescent/WaterWaves.png",
-      "prefix": "../assets"
-    },
-    {
       "uuid": "HH6Hea4TIbcaOCCXijFGHCP_",
       "ext": ".shader",
-      "hash": "a4fd7e2a",
-      "size": 4773,
+      "hash": "5ea4e4a4",
+      "size": 5040,
       "fs_path": "Shaders/BLGL/CrescentWater.shader",
       "prefix": "../assets"
     },
@@ -670,6 +670,6 @@
   ],
   "metadata": {
     "total_files": 83,
-    "total_size": 27808385
+    "total_size": 27809643
   }
 }
