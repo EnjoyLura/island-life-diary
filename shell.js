@@ -9,8 +9,13 @@
  const requestedFps=Number(url.searchParams.get('fps'));
  const reportFps=requestedFps>=30&&requestedFps<=120?Math.floor(requestedFps):60;
  const scale=Number(url.searchParams.get('worldscale'));
- const worldScale=[.5,.75,1].includes(scale)?scale:1;
+ // Bound 3D pixel cost on dense phone screens; the UI keeps its native DPR.
+ const physicalWidth=Math.min(window.innerWidth||540,540)*(window.devicePixelRatio||1);
+ const automaticScale=physicalWidth>960?.5:physicalWidth>720?.75:1;
+ const explicitScale=[.5,.75,1].includes(scale);
+ const worldScale=explicitScale?scale:automaticScale;
  const args=['-skip_login','-hostpacing','-reporthost=public-web','-fps='+reportFps,'-worldscale='+worldScale];
+ if(!explicitScale)args.push('-worldscaleauto');
  if(url.searchParams.get('ocean')==='off')args.push('-ocean=off');
  window.Module={arguments:args};
  const originalFetch=window.fetch.bind(window);

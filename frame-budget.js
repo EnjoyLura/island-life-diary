@@ -13,16 +13,19 @@
  // Keep the phase anchored, with bounded slack (still below half a 120 Hz tick).
  const tolerance=Math.min(3,interval*.35);
  let measurements=null,lastNative=null,lastDelivered=null;
- const intervalStats=()=>({samples:0,totalMs:0,maxMs:0,over25Ms:0});
+ const intervalStats=()=>({samples:0,totalMs:0,maxMs:0,over25Ms:0,bins:[0,0,0,0,0,0,0]});
+ const edges=[10,14,20,28,40,60];
  function measure(stats,delta){
   if(delta<=0)return;
   stats.samples++;stats.totalMs+=delta;stats.maxMs=Math.max(stats.maxMs,delta);
   if(delta>25)stats.over25Ms++;
+  let bin=0;while(bin<edges.length&&delta>edges[bin])bin++;stats.bins[bin]++;
  }
  function diagnostics(){
   if(!measurements)return null;
   const summarize=stats=>({samples:stats.samples,meanMs:stats.samples?stats.totalMs/stats.samples:0,
-   maxMs:stats.maxMs,over25Ms:stats.over25Ms});
+   maxMs:stats.maxMs,over25Ms:stats.over25Ms,
+   histogram:{upperBoundsMs:[...edges,null],counts:[...stats.bins]}});
   return {source:'host-requestAnimationFrame',targetFps:fps,toleranceMs:tolerance,
    nativeCallbacks:measurements.nativeCallbacks,deliveredFrames:measurements.deliveredFrames,
    throttleSkips:measurements.throttleSkips,nativeIntervals:summarize(measurements.nativeIntervals),

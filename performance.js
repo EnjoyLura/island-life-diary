@@ -79,7 +79,9 @@
   }
   if(kind==='window'){
    if(session?.id&&data.id&&data.id!==session.id)return;
-   if(session?.browser)session.browser.framePacing=window.CrescentFrameBudget?.diagnostics?.()||null;
+   const pacing=window.CrescentFrameBudget?.diagnostics?.()||null;
+   if(session?.browser)session.browser.framePacing=pacing;
+   if(pacing)data.browserFramePacing=pacing;
    samples.push(data);if(samples.length>720)samples.shift();persist();return;
   }
   if(kind!=='Export')return;
@@ -95,6 +97,12 @@
    const complete=JSON.parse(joined);
    if(complete.schema!=='crescent-performance/1'||complete.id!==parts.id)throw new Error('Invalid report');
    complete.browser=session?.browser||browserInfo();
+   // Preserve host cadence at each engine window, so late-session drops can
+   // be separated from changes in native browser callback scheduling.
+   for(const sample of complete.windows||[]) {
+    const host=samples.find(s=>s.fromMs===sample.fromMs&&s.toMs===sample.toMs&&s.mode===sample.mode);
+    if(host?.browserFramePacing)sample.browserFramePacing=host.browserFramePacing;
+   }
    const pacing=window.CrescentFrameBudget?.endDiagnostics?.();
    if(pacing)complete.browser.framePacing=pacing;
    report=complete;parts=null;persist();open();
