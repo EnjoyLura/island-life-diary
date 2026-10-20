@@ -30,8 +30,8 @@
     {
       "uuid": "AF_3SU05MWAtPSMWb7y73Z1B",
       "ext": ".lua",
-      "hash": "78bd31cd",
-      "size": 9043,
+      "hash": "67e936e3",
+      "size": 10543,
       "fs_path": "Game/RenderProbe.lua",
       "prefix": "../scripts"
     },
@@ -86,8 +86,8 @@
     {
       "uuid": "AeQ4YQUaTsNa1ljluqxxI0Xi",
       "ext": ".lua",
-      "hash": "4a1716cc",
-      "size": 1902,
+      "hash": "b981da66",
+      "size": 2073,
       "fs_path": "main.lua",
       "prefix": "../scripts"
     },
@@ -388,6 +388,14 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "EIiywbVOxMkWgXA6vfgdI7eZ",
+      "ext": ".lua",
+      "hash": "411acd04",
+      "size": 4967,
+      "fs_path": "Game/SceneTarget.lua",
+      "prefix": "../scripts"
+    },
+    {
       "uuid": "ELFAgc4bnotBttFwhRxGWumi",
       "ext": ".jpg",
       "hash": "5bbd2d01",
@@ -460,14 +468,6 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "FTFl4dJbkv4P1jY4rUOZkOXq",
-      "ext": ".png",
-      "hash": "1b63f697",
-      "size": 238931,
-      "fs_path": "Textures/Crescent/WaterWaves.png",
-      "prefix": "../assets"
-    },
-    {
       "uuid": "FTwOca8L6tLs7GbXKPIqmEWs",
       "ext": ".lua",
       "hash": "ca4d914b",
@@ -497,6 +497,14 @@
       "hash": "cfde4ab6",
       "size": 801,
       "fs_path": "Shaders/BLGL/CrescentWake.shader",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "FvJusXvfUkPZ7tm10mV1DaWR",
+      "ext": ".png",
+      "hash": "1b63f697",
+      "size": 238931,
+      "fs_path": "Textures/Crescent/WaterWaves.png",
       "prefix": "../assets"
     },
     {
@@ -604,14 +612,6 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "Hb21qQoqVD9nKuA5ZBI4hHQV",
-      "ext": ".lua",
-      "hash": "411acd04",
-      "size": 4967,
-      "fs_path": "Game/SceneTarget.lua",
-      "prefix": "../scripts"
-    },
-    {
       "uuid": "HcxdOev-lBmUOKO2xQ-P7gdf",
       "ext": ".png",
       "hash": "cac4b6f0",
@@ -662,6 +662,6 @@
   ],
   "metadata": {
     "total_files": 82,
-    "total_size": 27800799
+    "total_size": 27802470
   }
 }
