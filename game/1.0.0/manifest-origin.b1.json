@@ -30,8 +30,8 @@
     {
       "uuid": "AF_3SU05MWAtPSMWb7y73Z1B",
       "ext": ".lua",
-      "hash": "b89509f9",
-      "size": 10546,
+      "hash": "7fd1fa43",
+      "size": 10542,
       "fs_path": "Game/RenderProbe.lua",
       "prefix": "../scripts"
     },
@@ -126,8 +126,8 @@
     {
       "uuid": "B3sEWZKrpEIglobwfWmQDU0U",
       "ext": ".lua",
-      "hash": "8873bc40",
-      "size": 12842,
+      "hash": "9cb59d8a",
+      "size": 12984,
       "fs_path": "Game/HUD.lua",
       "prefix": "../scripts"
     },
@@ -137,14 +137,6 @@
       "hash": "b2a0a029",
       "size": 1278848,
       "fs_path": "Textures/CelWorld/buildings.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "BAFuCQF8GOC3Ofv_j2uYe0IQ",
-      "ext": ".png",
-      "hash": "1b63f697",
-      "size": 238931,
-      "fs_path": "Textures/Crescent/WaterWaves.png",
       "prefix": "../assets"
     },
     {
@@ -324,6 +316,14 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "D6Ziid2QaG4Glmrc1cPG8BbM",
+      "ext": ".lua",
+      "hash": "f5196090",
+      "size": 1174,
+      "fs_path": "Game/FishingView.lua",
+      "prefix": "../scripts"
+    },
+    {
       "uuid": "D8Sv6cDyw3JOQOr5PPisREDj",
       "ext": ".jpg",
       "hash": "fb59f615",
@@ -350,8 +350,8 @@
     {
       "uuid": "DjJoAVfaT_hX4WnPN5-2NkDY",
       "ext": ".lua",
-      "hash": "bc26202f",
-      "size": 29777,
+      "hash": "95b23f5f",
+      "size": 29883,
       "fs_path": "Game/Scene3D.lua",
       "prefix": "../scripts"
     },
@@ -412,14 +412,6 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "ES0DERdLX1UeB9t7JCmsMFve",
-      "ext": ".lua",
-      "hash": "7a3a2907",
-      "size": 5041,
-      "fs_path": "Game/SceneTarget.lua",
-      "prefix": "../scripts"
-    },
-    {
       "uuid": "E_B0UXAGRBeareB2dY4u6yuT",
       "ext": ".lua",
       "hash": "479017fd",
@@ -444,12 +436,28 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "Efod0VpKRxNbQTSBLqyl04FA",
+      "ext": ".xml",
+      "hash": "a7fbb842",
+      "size": 1406,
+      "fs_path": "RenderPaths/CrescentForward.xml",
+      "prefix": "../assets"
+    },
+    {
       "uuid": "EkNPEWUNgvSB-oXD3YiDz61_",
       "ext": ".lua",
       "hash": "a54057d4",
       "size": 920,
       "fs_path": "Game/RenderSettings.lua",
       "prefix": "../scripts"
+    },
+    {
+      "uuid": "ElKFuYu-VrNS_W4MKYoE8l5e",
+      "ext": ".png",
+      "hash": "1b63f697",
+      "size": 238931,
+      "fs_path": "Textures/Crescent/WaterWaves.png",
+      "prefix": "../assets"
     },
     {
       "uuid": "Ey_LccXGqAd33-MhJDGphjCD",
@@ -548,14 +556,6 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "GM-Tyd-OcqyLTnaynASnQuvt",
-      "ext": ".xml",
-      "hash": "a7fbb842",
-      "size": 1406,
-      "fs_path": "RenderPaths/CrescentForward.xml",
-      "prefix": "../assets"
-    },
-    {
       "uuid": "GSXr4Zc0PsD9EIOAm8_Q1R6u",
       "ext": ".shader",
       "hash": "1e017992",
@@ -582,8 +582,8 @@
     {
       "uuid": "GwuHoTG00fPAfC4mvpQo0vka",
       "ext": ".lua",
-      "hash": "533d0ea6",
-      "size": 28752,
+      "hash": "afb059b1",
+      "size": 28959,
       "fs_path": "Game/App.lua",
       "prefix": "../scripts"
     },
@@ -652,6 +652,14 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "HynhsRPZ_Ds9B5w6U9s1nQaC",
+      "ext": ".lua",
+      "hash": "7a3a2907",
+      "size": 5041,
+      "fs_path": "Game/SceneTarget.lua",
+      "prefix": "../scripts"
+    },
+    {
       "uuid": "tlawEi10SoqsGoO1hUQ3Qw",
       "ext": ".json",
       "hash": "c5a0733b",
@@ -669,7 +677,7 @@
     }
   ],
   "metadata": {
-    "total_files": 83,
-    "total_size": 27809643
+    "total_files": 84,
+    "total_size": 27811268
   }
 }
