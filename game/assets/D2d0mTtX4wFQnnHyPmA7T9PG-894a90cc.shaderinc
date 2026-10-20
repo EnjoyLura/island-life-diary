@@ -1,0 +1,60 @@
+// Two directional slope samples; no per-pixel wave synthesis or colour noise.
+uniform sampler2D wave_data : filter_linear_mipmap, repeat_enable;
+uniform float chart_mode = 0.0;
+uniform float home_mode = 0.0;
+uniform float fishing_mode = 0.0;
+// xyz points toward an orthographic camera; w=0 selects perspective instead.
+uniform vec4 water_view = vec4(0.0,1.0,0.0,0.0);
+varying vec3 water_normal;
+varying float water_crest;
+// Stage built-ins are only available inside vertex()/fragment() in UrhoX.
+// Pass camera/varying values explicitly so the shared helper parses on all backends.
+vec4 water_light(vec3 position,vec3 base_normal,float crest_height,vec3 camera_position,
+                 float depth,out vec2 foam_data) {
+    vec2 p=position.xz;
+    vec4 a=texture(wave_data,p*.022-vec2(ocean_time*.011,ocean_time*.016));
+    // Rotate both the fine sample coordinates and its slopes back to world XZ.
+    vec2 rotated=vec2(.94*p.x-.342*p.y,.342*p.x+.94*p.y);
+    vec4 b=texture(wave_data,rotated*.065-vec2(ocean_time*.008,ocean_time*.014));
+    vec2 fine=b.rg-.5;
+    fine=vec2(.94*fine.x+.342*fine.y,-.342*fine.x+.94*fine.y);
+    // Screen footprint works for both zoomable ortho views and the fishing horizon.
+    // Unresolved ripples broaden the highlight instead of flickering or going flat.
+    float footprint=length(fwidth(p));
+    float fine_detail=1.0-smoothstep(.08,.55,footprint);
+    float broad_detail=1.0-smoothstep(.35,1.8,footprint);
+    // Encoded derivatives are height slopes, so the upward normal uses -slope.
+    vec2 ripple=(a.rg-.5)*.65*broad_detail+fine*.22*fine_detail;
+    vec3 n=normalize(base_normal-vec3(ripple.x,0.0,ripple.y));
+    vec3 view=water_view.xyz;
+    if(water_view.w<.5) { view=normalize(camera_position-position); }
+    float facing=clamp(dot(n,view),0.0,1.0);
+    float f=1.0-facing;float f2=f*f;
+    float fresnel=.025+.70*f2*f2*f;
+    vec3 reflected=reflect(-view,n);
+    vec3 sky=mix(vec3(.52,.76,.91),vec3(.16,.45,.77),clamp(reflected.y,0.0,1.0));
+    // Body colour follows depth and the large physical swell. Fine slopes affect
+    // reflected light only; they no longer paint high-contrast oily blue cells.
+    float shade=clamp(.5+dot(base_normal.xz,vec2(-1.5,-.6))+crest_height*.28,0.0,1.0);
+    vec3 blue=mix(vec3(.025,.32,.57),vec3(.035,.405,.66),shade);
+    // Clear turquoise shelves converge to the deep material before the mesh seam.
+    float shallow=1.0-smoothstep(1.0,19.0,depth);
+    blue=mix(blue,vec3(.035,.57,.64),shallow*.48);
+    float transmission=max(crest_height,0.0)*(1.0-facing)*broad_detail;
+    blue+=vec3(.0,.075,.045)*transmission;
+    blue=mix(blue,sky,fresnel);
+    vec3 half_light=normalize(view+normalize(vec3(-.45,.75,.40)));
+    float roughness=mix(.16,.29,1.0-fine_detail);
+    float r2=roughness*roughness;
+    float nh=max(dot(n,half_light),0.0);
+    float lobe=1.0+nh*nh*(r2-1.0);
+    float glint=min(.28,.008*r2/(lobe*lobe));
+    // Sparse crest highlights follow the moving swell and break along its ridge.
+    foam_data=vec2(a.a*.65+b.a*.35,a.b);
+    float noise_width=max(.035,fwidth(foam_data.x));
+    float crest=smoothstep(.23,.40,crest_height)
+        *smoothstep(.57-noise_width,.66+noise_width,foam_data.x)*broad_detail;
+    float foam=crest*.15*(1.0-chart_mode*.65)*(1.0-home_mode*.5);
+    blue=mix(blue,vec3(.85,.96,1.0),foam);
+    return vec4(clamp(blue+vec3(glint),vec3(0.0),vec3(1.0)),fresnel);
+}

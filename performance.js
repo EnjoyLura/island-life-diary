@@ -73,11 +73,13 @@
   let data;try{data=JSON.parse(match[2]);}catch{return;}
   const kind=match[1]||'window';
   if(kind==='Session'&&data.event==='start'){
+   window.CrescentFrameBudget?.beginDiagnostics?.();
    session={...data,browser:browserInfo()};report=null;parts=null;samples.length=0;
    if(opener)opener.hidden=true;persist();return;
   }
   if(kind==='window'){
    if(session?.id&&data.id&&data.id!==session.id)return;
+   if(session?.browser)session.browser.framePacing=window.CrescentFrameBudget?.diagnostics?.()||null;
    samples.push(data);if(samples.length>720)samples.shift();persist();return;
   }
   if(kind!=='Export')return;
@@ -92,7 +94,10 @@
    const joined=Array.from({length:parts.total},(_,i)=>parts.values.get(i+1)).join('');
    const complete=JSON.parse(joined);
    if(complete.schema!=='crescent-performance/1'||complete.id!==parts.id)throw new Error('Invalid report');
-   complete.browser=session?.browser||browserInfo();report=complete;parts=null;persist();open();
+   complete.browser=session?.browser||browserInfo();
+   const pacing=window.CrescentFrameBudget?.endDiagnostics?.();
+   if(pacing)complete.browser.framePacing=pacing;
+   report=complete;parts=null;persist();open();
   }catch{parts=null;}
  }
  const original=console.log.bind(console);
