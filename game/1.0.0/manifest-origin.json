@@ -30,8 +30,8 @@
     {
       "uuid": "AF_3SU05MWAtPSMWb7y73Z1B",
       "ext": ".lua",
-      "hash": "fbb949dc",
-      "size": 10549,
+      "hash": "282b91de",
+      "size": 10551,
       "fs_path": "Game/RenderProbe.lua",
       "prefix": "../scripts"
     },
@@ -78,8 +78,8 @@
     {
       "uuid": "AdNL2dHTWL31qKaOJVKK7a92",
       "ext": ".lua",
-      "hash": "3cb6b212",
-      "size": 3842,
+      "hash": "d76be972",
+      "size": 4414,
       "fs_path": "Game/OceanMotion.lua",
       "prefix": "../scripts"
     },
@@ -254,16 +254,16 @@
     {
       "uuid": "COBk-dYQe340cy7mkeMB4yJZ",
       "ext": ".png",
-      "hash": "203667c2",
-      "size": 147622,
+      "hash": "b5c13122",
+      "size": 236301,
       "fs_path": "Textures/Crescent/WaterFieldBay.png",
       "prefix": "../assets"
     },
     {
       "uuid": "CPfm0W413eLodvzW4TW5zbHm",
       "ext": ".lua",
-      "hash": "88181eb9",
-      "size": 7923,
+      "hash": "d46a1bdf",
+      "size": 8280,
       "fs_path": "Game/SeaChart.lua",
       "prefix": "../scripts"
     },
@@ -348,14 +348,6 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "DBPviQp5E77aIrvltuhQiq8Q",
-      "ext": ".lua",
-      "hash": "ff710f2b",
-      "size": 726,
-      "fs_path": "Game/SharkPatrol.lua",
-      "prefix": "../scripts"
-    },
-    {
       "uuid": "DBZw2RYpNt3jDVXCYsp7ybNq",
       "ext": ".lua",
       "hash": "d0de2371",
@@ -438,8 +430,8 @@
     {
       "uuid": "ED3iqclSBbe8GcmMllphrQRR",
       "ext": ".png",
-      "hash": "a3b2f588",
-      "size": 51093,
+      "hash": "2eb71ef7",
+      "size": 51053,
       "fs_path": "Textures/Crescent/ReefData.png",
       "prefix": "../assets"
     },
@@ -494,8 +486,8 @@
     {
       "uuid": "Ey_LccXGqAd33-MhJDGphjCD",
       "ext": ".lua",
-      "hash": "796161d8",
-      "size": 663629,
+      "hash": "233d4b51",
+      "size": 1321677,
       "fs_path": "Game/OceanFieldData.lua",
       "prefix": "../scripts"
     },
@@ -548,6 +540,22 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "Ff9coXYNfRZ15Nf_l_QFoPrr",
+      "ext": ".lua",
+      "hash": "7716bc30",
+      "size": 863,
+      "fs_path": "Game/SeaRegions.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "FfcCoSeqGkOXRY08Yn9N1U6M",
+      "ext": ".lua",
+      "hash": "ff710f2b",
+      "size": 726,
+      "fs_path": "Game/SharkPatrol.lua",
+      "prefix": "../scripts"
+    },
+    {
       "uuid": "Fo2laUMRjqIgxNzvHnek0ft3",
       "ext": ".shader",
       "hash": "fd7636cb",
@@ -574,16 +582,16 @@
     {
       "uuid": "GD02UQTEqkpVLq78Cq7D33TG",
       "ext": ".lua",
-      "hash": "e6032d39",
-      "size": 6176,
+      "hash": "2eba0542",
+      "size": 6429,
       "fs_path": "Game/Bay.lua",
       "prefix": "../scripts"
     },
     {
       "uuid": "GEbDefXUuySZ0Ne3bel-nDzR",
       "ext": ".lua",
-      "hash": "34b9a09a",
-      "size": 3644,
+      "hash": "51103dcc",
+      "size": 4154,
       "fs_path": "Game/OceanRenderer.lua",
       "prefix": "../scripts"
     },
@@ -622,8 +630,8 @@
     {
       "uuid": "GwuHoTG00fPAfC4mvpQo0vka",
       "ext": ".lua",
-      "hash": "68b24f4d",
-      "size": 32806,
+      "hash": "98befc12",
+      "size": 32800,
       "fs_path": "Game/App.lua",
       "prefix": "../scripts"
     },
@@ -709,7 +717,7 @@
     }
   ],
   "metadata": {
-    "total_files": 88,
-    "total_size": 28824000
+    "total_files": 89,
+    "total_size": 29573238
   }
 }
