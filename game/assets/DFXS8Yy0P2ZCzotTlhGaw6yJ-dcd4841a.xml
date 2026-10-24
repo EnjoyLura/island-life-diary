@@ -1,0 +1,4 @@
+<material>
+    <surfaceshader name="Shaders/BLGL/CrescentDeepWater.shader" />
+    <surfacetexture name="wave_data" texture="Textures/Crescent/WaterWaves.png" />
+</material>

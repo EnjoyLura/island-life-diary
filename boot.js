@@ -59,11 +59,6 @@
    return;
   }
   status.textContent='正在准备出海…';
-  if(window.CrescentOcean){
-   status.textContent='正在准备海浪与小岛…';
-   await window.CrescentOcean.init();
-   status.textContent='正在准备出海…';
-  }
   const script=document.createElement('script');
   script.src=new URL('player.js',base).href;
   script.onerror=()=>fail(new Error('游戏启动脚本下载失败，请检查网络后重新加载。'));

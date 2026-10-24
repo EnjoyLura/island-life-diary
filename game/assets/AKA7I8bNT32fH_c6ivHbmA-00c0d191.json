@@ -1,0 +1,30 @@
+{
+  "$schema": "../schemas/resources.schema.json",
+
+  "preload_groups": [
+    "shader-startup",
+    "ui-startup"
+  ],
+
+  "groups": {
+    "default": [
+      "**"
+    ],
+    "shader-startup": [
+      "Shaders/BLGL/*.shaderinc"
+    ],
+    "ui-startup": [
+      "image/ui/nautical-v1/**",
+      "image/HomeIslandV47/**",
+      "Textures/CelWorld/vegetation.png",
+      "Textures/CelWorld/buildings.png",
+      "Textures/Crescent/WaterWaves.png",
+      "Materials/HomeOcean.xml",
+      "RenderPaths/HomeOcean.xml",
+      "Shaders/BLGL/CrescentDeepWater.shader",
+      "RenderPaths/HomeIsland.xml",
+      "Shaders/BLGL/CrescentHomeLand.shader",
+      "Shaders/BLGL/CrescentSprite.shader"
+    ]
+  }
+}
