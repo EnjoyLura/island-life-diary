@@ -1,0 +1,5 @@
+<material>
+    <surfaceshader name="Shaders/BLGL/CrescentHomeOcean.shader" />
+    <surfacetexture name="shore_data" texture="image/HomeIslandV48/shore-data.png" />
+    <parameter name="shore_bounds" value="-300 -300 2600 4360" />
+</material>
