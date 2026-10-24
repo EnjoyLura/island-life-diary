@@ -1,0 +1,20 @@
+{
+  "$schema": "../schemas/resources.schema.json",
+
+  "preload_groups": [
+    "shader-startup",
+    "ui-startup"
+  ],
+
+  "groups": {
+    "default": [
+      "**"
+    ],
+    "shader-startup": [
+      "Shaders/BLGL/*.shaderinc"
+    ],
+    "ui-startup": [
+      "image/ui/nautical-v1/**"
+    ]
+  }
+}
