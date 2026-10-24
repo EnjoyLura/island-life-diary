@@ -1,0 +1,8 @@
+<!-- Transparent, retained land/atlas cutouts only. All materials use depth-writing
+     base passes; map-base Y determines cross-atlas overlap. Display RGB is already
+     emitted by CrescentHomeLand, so no fullscreen gamma/tonemap/bloom pass belongs
+     here: bundled GammaCorrection and Tonemap overwrite the background alpha. -->
+<renderpath>
+    <command type="clear" color="0 0 0 0" depth="1.0" stencil="0" />
+    <command type="scenepass" pass="base" />
+</renderpath>
