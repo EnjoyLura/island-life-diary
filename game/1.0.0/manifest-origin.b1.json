@@ -12,44 +12,12 @@
       "prefix": "."
     },
     {
-      "uuid": "A-DIcTuEEC8lPyi-QANxk5kO",
-      "ext": ".png",
-      "hash": "20292c01",
-      "size": 4159,
-      "fs_path": "image/ui/nautical-v1/BTN-square--disabled.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "A05RYedAvrnw91tnG3Cr8YVv",
-      "ext": ".png",
-      "hash": "997927d4",
-      "size": 628,
-      "fs_path": "image/ui/nautical-v1/STA-bar.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "A0xGOftvsaIn7RXRrA9xCXIP",
+      "uuid": "A-M2qSLee9vs9R3JWrUzz0oc",
       "ext": ".lua",
-      "hash": "b28480c5",
-      "size": 5235,
-      "fs_path": "Game/HomeUI.lua",
+      "hash": "5dece729",
+      "size": 2349,
+      "fs_path": "Game/GMUI.lua",
       "prefix": "../scripts"
-    },
-    {
-      "uuid": "A13mqdGfQIzijEk7jbYSyUpJ",
-      "ext": ".png",
-      "hash": "e7eecdf8",
-      "size": 4136,
-      "fs_path": "image/ui/nautical-v1/BTN-square--pressed.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "A5-GaXqlZugV3RK1nPSDsKQZ",
-      "ext": ".png",
-      "hash": "76a09a65",
-      "size": 1091,
-      "fs_path": "image/ui/nautical-v1/STA-badge.png",
-      "prefix": "../assets"
     },
     {
       "uuid": "A7AjmQxsDV9TRuSDovPUREBy",
@@ -57,14 +25,6 @@
       "hash": "4ae39cf4",
       "size": 712,
       "fs_path": "Shaders/BLGL/CrescentSprite.shader",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "A83XIUR16Tjhn3hLcXNnPLzX",
-      "ext": ".png",
-      "hash": "830aa39b",
-      "size": 4130,
-      "fs_path": "image/ui/nautical-v1/BTN-tab.png",
       "prefix": "../assets"
     },
     {
@@ -76,14 +36,6 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "ACfr4Rd3_oK0GbsfqRC1eEQe",
-      "ext": ".png",
-      "hash": "1f5a436b",
-      "size": 2155,
-      "fs_path": "image/ui/nautical-v1/STA-rarity.png",
-      "prefix": "../assets"
-    },
-    {
       "uuid": "AF_3SU05MWAtPSMWb7y73Z1B",
       "ext": ".lua",
       "hash": "0a4ad353",
@@ -92,19 +44,27 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "AFx4Eb8DB6h4a3KzuF9CiP7p",
-      "ext": ".png",
-      "hash": "b6e4ede9",
-      "size": 4778,
-      "fs_path": "image/ui/nautical-v1/BTN-primary--disabled.png",
+      "uuid": "AG3hQa5r7TualCwAfwfsyggo",
+      "ext": ".shader",
+      "hash": "1b545547",
+      "size": 2145,
+      "fs_path": "Shaders/BLGL/CrescentBeachWater.shader",
       "prefix": "../assets"
     },
     {
-      "uuid": "AGzigXyMJCef4zQ_CdQ08JFO",
+      "uuid": "AG6pCfWEkMuDFCfqAtAX1Iih",
       "ext": ".png",
-      "hash": "f89f006e",
-      "size": 1102,
-      "fs_path": "image/ui/nautical-v1/STA-badge--muted.png",
+      "hash": "edde1b7c",
+      "size": 1097,
+      "fs_path": "image/ui/nautical-v1/STA-badge--gold.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "AGN3QRDTKVazZjlTIDZVY2w3",
+      "ext": ".png",
+      "hash": "445241cf",
+      "size": 3123,
+      "fs_path": "image/ui/nautical-v1/NAV-arrow.png",
       "prefix": "../assets"
     },
     {
@@ -116,20 +76,20 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "AIPWcYI8O-RX0vT3LUxECjns",
+      "ext": ".png",
+      "hash": "56e78dcb",
+      "size": 6029,
+      "fs_path": "image/ui/nautical-v1/BTN-nav--selected.png",
+      "prefix": "../assets"
+    },
+    {
       "uuid": "AJnS0bZjYvH-K4806Ln0OY_y",
       "ext": ".lua",
       "hash": "25497ab0",
       "size": 19041,
       "fs_path": "Game/State.lua",
       "prefix": "../scripts"
-    },
-    {
-      "uuid": "AJrO4ZES3LMzaJRCbAoddYLd",
-      "ext": ".png",
-      "hash": "044859fc",
-      "size": 19894,
-      "fs_path": "image/ui/nautical-v1/BTN-action--pressed.png",
-      "prefix": "../assets"
     },
     {
       "uuid": "AKA7I8bNT32fH_c6ivHbmA",
@@ -140,14 +100,6 @@
       "prefix": "."
     },
     {
-      "uuid": "AKKuYcH21hZQ_nYaJSWMvGfj",
-      "ext": ".png",
-      "hash": "469d237d",
-      "size": 5105,
-      "fs_path": "image/ui/nautical-v1/STA-quality--orange.png",
-      "prefix": "../assets"
-    },
-    {
       "uuid": "AMkh0fEWtzzNJKMbvztb6ZQ9",
       "ext": ".shaderinc",
       "hash": "7180df01",
@@ -156,12 +108,28 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "AOdCGScbrXdVjjIvC43BMazd",
+      "uuid": "AQ_M-Sj7YytnI03RLD-mhsPf",
       "ext": ".png",
-      "hash": "675c9fb1",
-      "size": 5418,
-      "fs_path": "image/ui/nautical-v1/BTN-nav--hover.png",
+      "hash": "830aa39b",
+      "size": 4130,
+      "fs_path": "image/ui/nautical-v1/BTN-tab.png",
       "prefix": "../assets"
+    },
+    {
+      "uuid": "AQbfiYhuuadKHVtOvVVUTRER",
+      "ext": ".lua",
+      "hash": "97bd38df",
+      "size": 1154,
+      "fs_path": "Game/ForestArt.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "ARcKeRSTd-AQE-vE_iTXIivV",
+      "ext": ".lua",
+      "hash": "ecb65e40",
+      "size": 3417,
+      "fs_path": "Game/MusicUI.lua",
+      "prefix": "../scripts"
     },
     {
       "uuid": "AS9qcVbNzhwrjdxXp-qbA3IJ",
@@ -172,43 +140,19 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "AW2ZiWCP1U2uogDnLMOvpF8-",
-      "ext": ".xml",
-      "hash": "b567e1b6",
-      "size": 620,
-      "fs_path": "RenderPaths/CrescentBeach.xml",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "AYpM-cEFU8iT4V5Ai2JbUafl",
-      "ext": ".png",
-      "hash": "69335e10",
-      "size": 6518,
-      "fs_path": "image/ui/nautical-v1/PLT-page.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "A_V3IcwyBPWmTxHy_sARW3Nq",
-      "ext": ".png",
-      "hash": "4fb65cfd",
-      "size": 10751,
-      "fs_path": "image/ui/nautical-v1/NAV-look.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "AbygKZJcGTCfHE4I8z1OA18r",
-      "ext": ".ogg",
-      "hash": "8694ce92",
-      "size": 1152961,
-      "fs_path": "audio/Music/home.ogg",
-      "prefix": "../assets"
-    },
-    {
       "uuid": "AdNL2dHTWL31qKaOJVKK7a92",
       "ext": ".lua",
       "hash": "d76be972",
       "size": 4414,
       "fs_path": "Game/OceanMotion.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "AdlSEQpBhDC_r0WLFRvE19rC",
+      "ext": ".lua",
+      "hash": "fcd23115",
+      "size": 8066,
+      "fs_path": "Game/ForestWorld.lua",
       "prefix": "../scripts"
     },
     {
@@ -244,6 +188,14 @@
       "prefix": "../scripts"
     },
     {
+      "uuid": "AmBgiWf394574jLIsVrxAWcy",
+      "ext": ".png",
+      "hash": "96e04534",
+      "size": 4110,
+      "fs_path": "image/ui/nautical-v1/BTN-square--hover.png",
+      "prefix": "../assets"
+    },
+    {
       "uuid": "AmFcqckQ8iNKoiQTu9fxlx51",
       "ext": ".png",
       "hash": "bff705e1",
@@ -260,51 +212,27 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "Ao2akcG4-yGP49PQKTlGNatR",
+      "uuid": "Ase82UoGqpWO025ztk-A0glW",
       "ext": ".png",
-      "hash": "0d654fd1",
-      "size": 4500,
-      "fs_path": "image/ui/nautical-v1/BTN-secondary--hover.png",
+      "hash": "675c9fb1",
+      "size": 5418,
+      "fs_path": "image/ui/nautical-v1/BTN-nav--hover.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "AoZ6mbsgS1MChmUgNqesRJLq",
-      "ext": ".lua",
-      "hash": "63b5f32c",
-      "size": 3895,
-      "fs_path": "Game/ShoreArt.lua",
-      "prefix": "../scripts"
-    },
-    {
-      "uuid": "AqPVaeNFRspGYhAdtcupygX3",
-      "ext": ".png",
-      "hash": "56e78dcb",
-      "size": 6029,
-      "fs_path": "image/ui/nautical-v1/BTN-nav--selected.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "Aue6iV3HZkjSqrI6YH1Va8_d",
+      "uuid": "Axji6XB9TVd0tfvF5qq4lKOF",
       "ext": ".shader",
-      "hash": "1b545547",
-      "size": 2145,
-      "fs_path": "Shaders/BLGL/CrescentBeachWater.shader",
+      "hash": "2d1933f7",
+      "size": 708,
+      "fs_path": "Shaders/BLGL/CrescentBeachRock.shader",
       "prefix": "../assets"
     },
     {
-      "uuid": "AwIIASZcST2FJkoGCTbj4-Ex",
-      "ext": ".lua",
-      "hash": "5dece729",
-      "size": 2349,
-      "fs_path": "Game/GMUI.lua",
-      "prefix": "../scripts"
-    },
-    {
-      "uuid": "B-gf4ftjQ9j6P_730S-j4gal",
+      "uuid": "B1GsIXdYj1jKMXfq2fK5OXxC",
       "ext": ".png",
-      "hash": "d3a7881a",
-      "size": 5121,
-      "fs_path": "image/ui/nautical-v1/STA-quality--selected.png",
+      "hash": "f85f791a",
+      "size": 423,
+      "fs_path": "image/ui/nautical-v1/STA-bar--fill-coral.png",
       "prefix": "../assets"
     },
     {
@@ -316,11 +244,27 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "B3gMwRaUclt03zdUpcXFbwyW",
+      "ext": ".png",
+      "hash": "03a19746",
+      "size": 1057,
+      "fs_path": "image/ui/nautical-v1/PLT-caption.png",
+      "prefix": "../assets"
+    },
+    {
       "uuid": "B3sEWZKrpEIglobwfWmQDU0U",
       "ext": ".lua",
       "hash": "9e2f6c11",
       "size": 13820,
       "fs_path": "Game/HUD.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "B6kWSb5V5T00Wz9sABS3pX7q",
+      "ext": ".lua",
+      "hash": "9b42cb93",
+      "size": 8490,
+      "fs_path": "Game/ForestScenery.lua",
       "prefix": "../scripts"
     },
     {
@@ -332,27 +276,11 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "BBLkUSSkhImj6CCklJlKoUbM",
+      "uuid": "BExP6XOeWwk58aYXJsYOVupe",
       "ext": ".png",
-      "hash": "ea2d8b56",
-      "size": 4063,
-      "fs_path": "image/ui/nautical-v1/BTN-tab--pressed.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "BCtfgW1s9eWglbAzV7kOg0e0",
-      "ext": ".png",
-      "hash": "33f1cb9a",
-      "size": 597,
-      "fs_path": "image/ui/nautical-v1/NAV-target--crosshair.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "BEL0aXKVlUdq7WzTdhAZILpb",
-      "ext": ".png",
-      "hash": "921ea576",
-      "size": 4954,
-      "fs_path": "image/ui/nautical-v1/PLT-summary.png",
+      "hash": "7d3d12cf",
+      "size": 4155,
+      "fs_path": "image/ui/nautical-v1/BTN-square.png",
       "prefix": "../assets"
     },
     {
@@ -361,22 +289,6 @@
       "hash": "584aec1a",
       "size": 1047,
       "fs_path": "Shaders/BLGL/CrescentSeabed.shader",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "BHIfiWCtJmQF65eTJuNMPM_x",
-      "ext": ".shader",
-      "hash": "2d1933f7",
-      "size": 708,
-      "fs_path": "Shaders/BLGL/CrescentBeachRock.shader",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "BHed0WCS-fzEVJGzvh6nljxV",
-      "ext": ".png",
-      "hash": "59a6febe",
-      "size": 4300,
-      "fs_path": "image/ui/nautical-v1/PLT-bubble.png",
       "prefix": "../assets"
     },
     {
@@ -404,11 +316,11 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "BSnX0UvP3UEwdO9GEbX_Wl2c",
+      "uuid": "BRQeqbfO6BItOFYFREX0BkRz",
       "ext": ".png",
-      "hash": "11234b44",
-      "size": 17150,
-      "fs_path": "image/ui/nautical-v1/NAV-compass.png",
+      "hash": "997927d4",
+      "size": 628,
+      "fs_path": "image/ui/nautical-v1/STA-bar.png",
       "prefix": "../assets"
     },
     {
@@ -420,27 +332,11 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "BTZ6uYDGApGa-eNOu-S79TV7",
+      "uuid": "B_pM0fcurfuKlRIR6WpSN1oy",
       "ext": ".png",
-      "hash": "09a56e34",
-      "size": 316,
-      "fs_path": "image/ui/nautical-v1/STA-bar--fill-mask.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "BYSCCT09xjSha9lzhyFGHKfW",
-      "ext": ".png",
-      "hash": "a82dee62",
-      "size": 3969,
-      "fs_path": "image/ui/nautical-v1/NAV-pin.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "B_hv4RKP98BWMwaoHKGcAvEh",
-      "ext": ".txt",
-      "hash": "396843fa",
-      "size": 883,
-      "fs_path": "audio/CREDITS.txt",
+      "hash": "eab8db56",
+      "size": 2124,
+      "fs_path": "image/ui/nautical-v1/STA-rarity--blue.png",
       "prefix": "../assets"
     },
     {
@@ -452,27 +348,19 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "Bd6EaSFxke8DeIJjpuznN-Ra",
+      "uuid": "BcqOiV1gD1by6I1X1Ap7O9Bd",
       "ext": ".png",
-      "hash": "8ce9ba15",
-      "size": 5635,
-      "fs_path": "image/ui/nautical-v1/PLT-resource--dark.png",
+      "hash": "908b0fb7",
+      "size": 762,
+      "fs_path": "image/ui/nautical-v1/PLT-bubble--pointer-left.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "BdtYKQo60YUfF5aZgMB-hqHl",
+      "uuid": "BeiTmcO9Vo88a_9way6RK-Ba",
       "ext": ".shader",
-      "hash": "d09ce4af",
-      "size": 600,
-      "fs_path": "Shaders/BLGL/CrescentForestBark.shader",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "BeK-8estflLvKb1_9WlmBIId",
-      "ext": ".png",
-      "hash": "eab8db56",
-      "size": 2124,
-      "fs_path": "image/ui/nautical-v1/STA-rarity--blue.png",
+      "hash": "af3b03da",
+      "size": 371,
+      "fs_path": "Shaders/BLGL/CrescentForestGround.shader",
       "prefix": "../assets"
     },
     {
@@ -484,19 +372,11 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "Bg6oWWBVCIy66IWVeLyk074n",
+      "uuid": "BjIJAQDPKQebvBa120f3z_Ec",
       "ext": ".png",
-      "hash": "6d74653c",
-      "size": 5654,
-      "fs_path": "image/ui/nautical-v1/NAV-zone--danger.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "BkKtqRJbKVxbFrR1Zmj0daZo",
-      "ext": ".png",
-      "hash": "8c18e434",
-      "size": 4525,
-      "fs_path": "image/ui/nautical-v1/BTN-secondary--pressed.png",
+      "hash": "37087bc5",
+      "size": 3000,
+      "fs_path": "image/ui/nautical-v1/FX-loading.png",
       "prefix": "../assets"
     },
     {
@@ -506,30 +386,6 @@
       "size": 763,
       "fs_path": "Shaders/BLGL/CrescentSolid.shader",
       "prefix": "../assets"
-    },
-    {
-      "uuid": "BngWwZKfBaJ9c7SVjLBfqg4p",
-      "ext": ".png",
-      "hash": "badb34f0",
-      "size": 4035,
-      "fs_path": "image/ui/nautical-v1/NAV-look--indicator.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "Bq9U2fT8o3Dqgg0OJfxbF_nw",
-      "ext": ".ogg",
-      "hash": "6fb361d2",
-      "size": 400175,
-      "fs_path": "audio/Music/shore.ogg",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "BtHxGZT8YmoLmG8-fdhWoiGr",
-      "ext": ".lua",
-      "hash": "5ddc4bff",
-      "size": 8866,
-      "fs_path": "Game/ShoreScene.lua",
-      "prefix": "../scripts"
     },
     {
       "uuid": "BuqtoVhLIGZW9kDJQN-aXhat",
@@ -548,28 +404,36 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "By6paeswNaJr1x6Kg375-o7k",
+      "uuid": "ByEMobCYmUebthY7Oc9jP6bo",
       "ext": ".png",
-      "hash": "ac122d5e",
-      "size": 4545,
-      "fs_path": "image/ui/nautical-v1/BTN-secondary.png",
+      "hash": "11234b44",
+      "size": 17150,
+      "fs_path": "image/ui/nautical-v1/NAV-compass.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "C0YraW4iCkR_sKK722Vm7toR",
+      "uuid": "C-CT8VjezAYhi_S7XrF07hCk",
       "ext": ".png",
-      "hash": "7d3d12cf",
-      "size": 4155,
-      "fs_path": "image/ui/nautical-v1/BTN-square.png",
+      "hash": "89178b5f",
+      "size": 3988,
+      "fs_path": "image/ui/nautical-v1/NAV-joystick--knob.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "C2u0ebLm-PZl92nyYnkZOsMi",
-      "ext": ".lua",
-      "hash": "c00d522f",
-      "size": 3677,
-      "fs_path": "Game/UISkin.lua",
-      "prefix": "../scripts"
+      "uuid": "C1OieYGm4BBmyXgX7TeIbuH7",
+      "ext": ".ogg",
+      "hash": "8694ce92",
+      "size": 1152961,
+      "fs_path": "audio/Music/home.ogg",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "C4HbudQw3ZebkFuDG1NH58s8",
+      "ext": ".ogg",
+      "hash": "93826eb7",
+      "size": 1834970,
+      "fs_path": "audio/Music/sea.ogg",
+      "prefix": "../assets"
     },
     {
       "uuid": "C6WcsewsPt_H26MKeGtvyJ6T",
@@ -580,22 +444,6 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "C6d7kRHOzQiXTK__hn-MB8hM",
-      "ext": ".png",
-      "hash": "13053e8f",
-      "size": 3805,
-      "fs_path": "image/ui/nautical-v1/NAV-arrow--vision-cone.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "C9c5MSSHnz4ynS3PrmTSwDDa",
-      "ext": ".lua",
-      "hash": "5df31f39",
-      "size": 5125,
-      "fs_path": "Game/ShoreWorld.lua",
-      "prefix": "../scripts"
-    },
-    {
       "uuid": "CB3X8fYKwnbLLFfj7zTMxhho",
       "ext": ".jpg",
       "hash": "f0f66eeb",
@@ -604,27 +452,35 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "CBkvwa2Iw1jzAerua6gKvx6S",
-      "ext": ".ogg",
-      "hash": "dc5e4a0b",
-      "size": 641602,
-      "fs_path": "audio/Music/forest.ogg",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "CCpwOcOXh0HzY2DCn-cYAc-O",
-      "ext": ".png",
-      "hash": "b39aa8a5",
-      "size": 426,
-      "fs_path": "image/ui/nautical-v1/STA-bar--fill-green.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "CMhPIYmAS9Zi_zYYcC9wiy9G",
+      "uuid": "CCK7Wcyxuhhdk28O5WNaNKvB",
       "ext": ".lua",
-      "hash": "9b42cb93",
-      "size": 8490,
-      "fs_path": "Game/ForestScenery.lua",
+      "hash": "b74258f0",
+      "size": 5807,
+      "fs_path": "Game/Music.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "CH9HQWzsGePJ9MwvWuTyi9nF",
+      "ext": ".png",
+      "hash": "fa8e9bf4",
+      "size": 1466,
+      "fs_path": "image/ui/nautical-v1/NAV-scroll--thumb.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "CHfAAYSqhq7lxn1jk_B4Al5u",
+      "ext": ".png",
+      "hash": "b6e4ede9",
+      "size": 4778,
+      "fs_path": "image/ui/nautical-v1/BTN-primary--disabled.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "CMs7aZSEHKFJt200As6NHmW8",
+      "ext": ".lua",
+      "hash": "5ddc4bff",
+      "size": 8866,
+      "fs_path": "Game/ShoreScene.lua",
       "prefix": "../scripts"
     },
     {
@@ -652,20 +508,52 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "CTNuCYz_ts64sql1DMFLrc-Y",
+      "uuid": "CQMR8c6Sr6Bmlgv5uJ6XSkpg",
       "ext": ".png",
-      "hash": "1fb22581",
-      "size": 16285,
-      "fs_path": "image/ui/nautical-v1/BTN-action--disabled.png",
+      "hash": "d3a7881a",
+      "size": 5121,
+      "fs_path": "image/ui/nautical-v1/STA-quality--selected.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "CZiUiVHSWqaRhr-0HdbRt05Z",
+      "uuid": "CQROkcVCBy2WTIfwmAKj5pyb",
       "ext": ".png",
-      "hash": "07c151f9",
-      "size": 406,
-      "fs_path": "image/ui/nautical-v1/STA-bar--fill-gold.png",
+      "hash": "921ea576",
+      "size": 4954,
+      "fs_path": "image/ui/nautical-v1/PLT-summary.png",
       "prefix": "../assets"
+    },
+    {
+      "uuid": "CZIh2flZOLP7NgJ8h0fA1TG9",
+      "ext": ".ogg",
+      "hash": "dc5e4a0b",
+      "size": 641602,
+      "fs_path": "audio/Music/forest.ogg",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "C_AHGaczZHYzdkgptVFed2XW",
+      "ext": ".png",
+      "hash": "fdc628ae",
+      "size": 5453,
+      "fs_path": "image/ui/nautical-v1/BTN-nav--disabled.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "CfPYaSOHF-xuGmJmQgB1FagC",
+      "ext": ".shaderinc",
+      "hash": "194f7752",
+      "size": 1304,
+      "fs_path": "Shaders/BLGL/CrescentBeachSurf.shaderinc",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "CfeN4RbotgOGsJieTLaDCVnB",
+      "ext": ".lua",
+      "hash": "bd5bc0ca",
+      "size": 14536,
+      "fs_path": "Game/UISkinData.lua",
+      "prefix": "../scripts"
     },
     {
       "uuid": "Cj9dkd-qVYibRoHKF0QRk_TV",
@@ -676,28 +564,12 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "Ck3uKVeQLRBxMELoohR7BjMK",
-      "ext": ".lua",
-      "hash": "97bd38df",
-      "size": 1154,
-      "fs_path": "Game/ForestArt.lua",
-      "prefix": "../scripts"
-    },
-    {
       "uuid": "ClCk2ZqQFSHCpv3sbIVx1wse",
       "ext": ".lua",
       "hash": "1918c8fa",
       "size": 34691,
       "fs_path": "Game/Menus.lua",
       "prefix": "../scripts"
-    },
-    {
-      "uuid": "ClEbYeHGquxCIcD5EvHpkmQh",
-      "ext": ".png",
-      "hash": "37087bc5",
-      "size": 3000,
-      "fs_path": "image/ui/nautical-v1/FX-loading.png",
-      "prefix": "../assets"
     },
     {
       "uuid": "ClQbcSAUiXT8DSH2YCdXYEKn",
@@ -708,11 +580,11 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "Cn0SAfQhwIKmMaNY-cvqchUi",
+      "uuid": "Cn60gW-cZKQAv16y7n8zZnJX",
       "ext": ".png",
-      "hash": "987f177b",
-      "size": 19952,
-      "fs_path": "image/ui/nautical-v1/BTN-action--hover.png",
+      "hash": "a82dee62",
+      "size": 3969,
+      "fs_path": "image/ui/nautical-v1/NAV-pin.png",
       "prefix": "../assets"
     },
     {
@@ -732,11 +604,11 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "CwC7kW7jvglnr715y1mYqPPs",
-      "ext": ".shader",
-      "hash": "9425228c",
-      "size": 708,
-      "fs_path": "Shaders/BLGL/CrescentForestLeaves.shader",
+      "uuid": "CvrWyYZc0Y7-3zvV82tC4Geh",
+      "ext": ".png",
+      "hash": "8ce9ba15",
+      "size": 5635,
+      "fs_path": "image/ui/nautical-v1/PLT-resource--dark.png",
       "prefix": "../assets"
     },
     {
@@ -745,6 +617,14 @@
       "hash": "efcbb8b1",
       "size": 1697,
       "fs_path": "Shaders/BLGL/CrescentFish.shader",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "CylaUUJEshK-rEhE78IMjBHO",
+      "ext": ".png",
+      "hash": "59a6febe",
+      "size": 4300,
+      "fs_path": "image/ui/nautical-v1/PLT-bubble.png",
       "prefix": "../assets"
     },
     {
@@ -764,11 +644,27 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "D5UcifFv6HDK5fJMR3u4l9O8",
+      "ext": ".png",
+      "hash": "31dd0365",
+      "size": 1233,
+      "fs_path": "image/ui/nautical-v1/STA-tension--needle.png",
+      "prefix": "../assets"
+    },
+    {
       "uuid": "D8Sv6cDyw3JOQOr5PPisREDj",
       "ext": ".jpg",
       "hash": "fb59f615",
       "size": 714920,
       "fs_path": "image/crescent/island.jpg",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "D9UOSYbq4L8H0_7oJ2VBg3j8",
+      "ext": ".png",
+      "hash": "33f1cb9a",
+      "size": 597,
+      "fs_path": "image/ui/nautical-v1/NAV-target--crosshair.png",
       "prefix": "../assets"
     },
     {
@@ -780,12 +676,12 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "DEa0Ocd3vlC5S78QjH-f1l50",
-      "ext": ".lua",
-      "hash": "7716bc30",
-      "size": 863,
-      "fs_path": "Game/SeaRegions.lua",
-      "prefix": "../scripts"
+      "uuid": "DEVioU_GKuD8itlNVde0phhv",
+      "ext": ".png",
+      "hash": "13053e8f",
+      "size": 3805,
+      "fs_path": "image/ui/nautical-v1/NAV-arrow--vision-cone.png",
+      "prefix": "../assets"
     },
     {
       "uuid": "DHxPeVK6gQF3fWAPlPfnA2FZ",
@@ -796,43 +692,27 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "DISb2e6w_PRjrI1GWd1iEDSj",
-      "ext": ".png",
-      "hash": "4de7949f",
-      "size": 7692,
-      "fs_path": "image/ui/nautical-v1/BTN-primary--pressed.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "DJ4BYeVvCY9tPUjMnGMdoa4g",
-      "ext": ".lua",
-      "hash": "fcd23115",
-      "size": 8066,
-      "fs_path": "Game/ForestWorld.lua",
-      "prefix": "../scripts"
-    },
-    {
-      "uuid": "DJ6wYSbrMG-bxck-bUm4fQld",
-      "ext": ".png",
-      "hash": "7ef95b65",
-      "size": 12270,
-      "fs_path": "image/ui/nautical-v1/NAV-joystick.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "DKhbUccScgw_05cwbagJtSCd",
-      "ext": ".png",
-      "hash": "5ac43567",
-      "size": 7523,
-      "fs_path": "image/ui/nautical-v1/BTN-primary.png",
-      "prefix": "../assets"
-    },
-    {
       "uuid": "DL7nsVdT2tKeJfiiTBKZcvEs",
       "ext": ".png",
       "hash": "964ddaca",
       "size": 221819,
       "fs_path": "Textures/Crescent/WaterFieldHome.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "DMMyiUbtU4tMG2zy2EmOVF_B",
+      "ext": ".png",
+      "hash": "ebf899d6",
+      "size": 914,
+      "fs_path": "image/ui/nautical-v1/STA-quantity.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "DMOhqY9EdjvVE6COeZwswIKR",
+      "ext": ".png",
+      "hash": "469d237d",
+      "size": 5105,
+      "fs_path": "image/ui/nautical-v1/STA-quality--orange.png",
       "prefix": "../assets"
     },
     {
@@ -844,44 +724,108 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "DdAgsapzh8Njo7VZ0666ulpm",
+      "uuid": "DcoIocoouQWYYzz27am1pb53",
+      "ext": ".lua",
+      "hash": "c00d522f",
+      "size": 3677,
+      "fs_path": "Game/UISkin.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "Dcr0sVghFXNRdTnBwiOYHSnA",
       "ext": ".png",
-      "hash": "908b0fb7",
-      "size": 762,
-      "fs_path": "image/ui/nautical-v1/PLT-bubble--pointer-left.png",
+      "hash": "f89f006e",
+      "size": 1102,
+      "fs_path": "image/ui/nautical-v1/STA-badge--muted.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "Df4vEWB2U7y6Q42OBZEZuZZs",
+      "uuid": "Dd3y6TbjS-eN07WepZFRZcde",
       "ext": ".png",
-      "hash": "b44b7797",
-      "size": 699,
-      "fs_path": "image/ui/nautical-v1/PLT-bubble--pointer-up.png",
+      "hash": "8c18e434",
+      "size": 4525,
+      "fs_path": "image/ui/nautical-v1/BTN-secondary--pressed.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "DgaacZ_G284yzcRg4p7UmRNA",
+      "uuid": "DefJ4ediIQngUst1KnyEdcdK",
+      "ext": ".png",
+      "hash": "43f39260",
+      "size": 5131,
+      "fs_path": "image/ui/nautical-v1/STA-quality--blue.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "Df81EWrOED2e35VqAEr-Zlf7",
+      "ext": ".png",
+      "hash": "3b0e28a4",
+      "size": 1130,
+      "fs_path": "image/ui/nautical-v1/FX-toast.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "DhH4if8fW1KStJEG_-s3H1tP",
       "ext": ".shader",
-      "hash": "af3b03da",
-      "size": 371,
-      "fs_path": "Shaders/BLGL/CrescentForestGround.shader",
+      "hash": "f16085b3",
+      "size": 937,
+      "fs_path": "Shaders/BLGL/CrescentBeachSand.shader",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "Di5IkX45Zn2LJc0nu5FpMLxK",
+      "ext": ".png",
+      "hash": "456ccd76",
+      "size": 2161,
+      "fs_path": "image/ui/nautical-v1/STA-rarity--purple.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "DjG1sSevGo7CrU8nP5L-iw72",
+      "ext": ".png",
+      "hash": "1f5a436b",
+      "size": 2155,
+      "fs_path": "image/ui/nautical-v1/STA-rarity.png",
       "prefix": "../assets"
     },
     {
       "uuid": "DjJoAVfaT_hX4WnPN5-2NkDY",
       "ext": ".lua",
-      "hash": "33d2cee8",
-      "size": 40369,
+      "hash": "852e583e",
+      "size": 40431,
       "fs_path": "Game/Scene3D.lua",
       "prefix": "../scripts"
     },
     {
-      "uuid": "DnUtAdLhF52Ele9a--leqFPN",
+      "uuid": "Dk8-of6S2dvw9ML2pSRTtY6g",
       "ext": ".png",
       "hash": "7a1bbfff",
       "size": 7351,
       "fs_path": "image/ui/nautical-v1/BTN-primary--hover.png",
       "prefix": "../assets"
+    },
+    {
+      "uuid": "DlB3EcjereXurZ4daJOHr5dU",
+      "ext": ".png",
+      "hash": "e7eecdf8",
+      "size": 4136,
+      "fs_path": "image/ui/nautical-v1/BTN-square--pressed.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "Dmht2QJOIOZYGtgyRMwS_Mk1",
+      "ext": ".png",
+      "hash": "5ac43567",
+      "size": 7523,
+      "fs_path": "image/ui/nautical-v1/BTN-primary.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "DncNUbD1zcfg-vgP7l_RwO88",
+      "ext": ".lua",
+      "hash": "ff710f2b",
+      "size": 726,
+      "fs_path": "Game/SharkPatrol.lua",
+      "prefix": "../scripts"
     },
     {
       "uuid": "Dqm5QXSvN0W6J1DMbO085HW3",
@@ -892,20 +836,28 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "DrQ6AcGUAL33L_ORaiBnVSMv",
+      "uuid": "DqxH6V4yuGCaNiCGZOGMhpcp",
       "ext": ".png",
-      "hash": "6e93abec",
-      "size": 8220,
-      "fs_path": "image/ui/nautical-v1/STA-tension.png",
+      "hash": "6d74653c",
+      "size": 5654,
+      "fs_path": "image/ui/nautical-v1/NAV-zone--danger.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "DsGJmb8w_ygDe9d1IFwpmq--",
-      "ext": ".lua",
-      "hash": "ecb65e40",
-      "size": 3417,
-      "fs_path": "Game/MusicUI.lua",
-      "prefix": "../scripts"
+      "uuid": "Dul96eI2uTeHMDAls6umPilD",
+      "ext": ".png",
+      "hash": "04d3bb36",
+      "size": 5501,
+      "fs_path": "image/ui/nautical-v1/NAV-zone.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "DvxzacFkKBTJppXZkGsnfs5D",
+      "ext": ".png",
+      "hash": "987f177b",
+      "size": 19952,
+      "fs_path": "image/ui/nautical-v1/BTN-action--hover.png",
+      "prefix": "../assets"
     },
     {
       "uuid": "DwLJeRALa_MdM4UiIDCBdHTA",
@@ -924,27 +876,19 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "DyYJibA4-GDQ83L3yNSmDhcb",
+      "uuid": "E4_CCap9NcMSovcy4Ethp-4z",
       "ext": ".png",
-      "hash": "ebf899d6",
-      "size": 914,
-      "fs_path": "image/ui/nautical-v1/STA-quantity.png",
+      "hash": "7d000636",
+      "size": 730,
+      "fs_path": "image/ui/nautical-v1/PLT-bubble--pointer-right.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "Dz3X0cHdb71Jq527KvdWEvpI",
+      "uuid": "E7rp8eqQMnBb2SmTg6oN9VeU",
       "ext": ".png",
-      "hash": "fba72809",
-      "size": 421,
-      "fs_path": "image/ui/nautical-v1/STA-bar--fill-blue.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "E2YOgV7Xl6P6_xb7at0sVChz",
-      "ext": ".png",
-      "hash": "fa8e9bf4",
-      "size": 1466,
-      "fs_path": "image/ui/nautical-v1/NAV-scroll--thumb.png",
+      "hash": "ac122d5e",
+      "size": 4545,
+      "fs_path": "image/ui/nautical-v1/BTN-secondary.png",
       "prefix": "../assets"
     },
     {
@@ -964,11 +908,19 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "E9BA-Qtd62z4IzI2jCZ_01xX",
-      "ext": ".ogg",
-      "hash": "93826eb7",
-      "size": 1834970,
-      "fs_path": "audio/Music/sea.ogg",
+      "uuid": "EAbc-UN20JU1DKrnvv_-TdMs",
+      "ext": ".png",
+      "hash": "06867c2b",
+      "size": 1093,
+      "fs_path": "image/ui/nautical-v1/STA-badge--coral.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "ED-m8bJW-LwrxORKSdixyRpO",
+      "ext": ".png",
+      "hash": "db6fb9c3",
+      "size": 5110,
+      "fs_path": "image/ui/nautical-v1/STA-quality.png",
       "prefix": "../assets"
     },
     {
@@ -980,19 +932,19 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "EEFz-TYBx86GPuj1brVzSsom",
-      "ext": ".lua",
-      "hash": "ff710f2b",
-      "size": 726,
-      "fs_path": "Game/SharkPatrol.lua",
-      "prefix": "../scripts"
+      "uuid": "EF_AoWv8MhShk9xAaqv0ECr2",
+      "ext": ".png",
+      "hash": "badb34f0",
+      "size": 4035,
+      "fs_path": "image/ui/nautical-v1/NAV-look--indicator.png",
+      "prefix": "../assets"
     },
     {
-      "uuid": "EIGV6UxDPhiE4-DLaObcI0ZB",
+      "uuid": "EGtz8VUYW14Bd6v3ujdasocf",
       "ext": ".png",
-      "hash": "33227660",
-      "size": 4963,
-      "fs_path": "image/ui/nautical-v1/PLT-card.png",
+      "hash": "854049d8",
+      "size": 4655,
+      "fs_path": "image/ui/nautical-v1/BTN-tab--selected.png",
       "prefix": "../assets"
     },
     {
@@ -1004,11 +956,27 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "EQ2Z-WPJ2hAkL2TMLyWO-OoA",
+      "uuid": "ELFi6a-2xaNXOjNul9aWDZsd",
       "ext": ".png",
-      "hash": "4968b1b0",
-      "size": 5154,
-      "fs_path": "image/ui/nautical-v1/STA-quality--purple.png",
+      "hash": "ea2d8b56",
+      "size": 4063,
+      "fs_path": "image/ui/nautical-v1/BTN-tab--pressed.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "EPPTgexHQHRoxkRfcGBAi7-h",
+      "ext": ".png",
+      "hash": "09b9af8a",
+      "size": 171830,
+      "fs_path": "image/ui/nautical-v1/icons@2x.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "EQhbEUBa4ivWokTDR59Jv6Q2",
+      "ext": ".shader",
+      "hash": "9425228c",
+      "size": 708,
+      "fs_path": "Shaders/BLGL/CrescentForestLeaves.shader",
       "prefix": "../assets"
     },
     {
@@ -1020,11 +988,19 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "EZmzIXOebBDjt3s5w0uqCjA4",
+      "uuid": "EUjeWWLCgs74ogg9NunpbzER",
       "ext": ".png",
-      "hash": "a09d6077",
-      "size": 151,
-      "fs_path": "image/ui/nautical-v1/NAV-target--trajectory-segment.png",
+      "hash": "0d654fd1",
+      "size": 4500,
+      "fs_path": "image/ui/nautical-v1/BTN-secondary--hover.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "EVfqGfyZWbHHpfR3khbOuPe4",
+      "ext": ".png",
+      "hash": "fba72809",
+      "size": 421,
+      "fs_path": "image/ui/nautical-v1/STA-bar--fill-blue.png",
       "prefix": "../assets"
     },
     {
@@ -1036,19 +1012,19 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "E_v7KcLovdQtxomEyh0tOKvZ",
-      "ext": ".png",
-      "hash": "5e628576",
-      "size": 9161,
-      "fs_path": "image/ui/nautical-v1/FX-discover.png",
-      "prefix": "../assets"
-    },
-    {
       "uuid": "EaqUGa8FCSlz2KlAMHtgaoak",
       "ext": ".png",
       "hash": "30af68fc",
       "size": 2424540,
       "fs_path": "Textures/CelWorld/shore-shelf.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "EbdwYfqXFLV6xmhbRSWVfPQ-",
+      "ext": ".ogg",
+      "hash": "6fb361d2",
+      "size": 400175,
+      "fs_path": "audio/Music/shore.ogg",
       "prefix": "../assets"
     },
     {
@@ -1060,35 +1036,19 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "EcXBafvQ4u631WTFcQnNt0fh",
+      "uuid": "Ef-AeasdL6maTgwJxBJJ2sA0",
       "ext": ".png",
-      "hash": "cb2ee63f",
-      "size": 273,
-      "fs_path": "image/ui/nautical-v1/NAV-scroll.png",
+      "hash": "f5d56027",
+      "size": 4423,
+      "fs_path": "image/ui/nautical-v1/PLT-resource.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "EcjXUcWuzXcIM0tFeWhCTWSJ",
-      "ext": ".png",
-      "hash": "7d000636",
-      "size": 730,
-      "fs_path": "image/ui/nautical-v1/PLT-bubble--pointer-right.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "EfSiEfLc1akv-H1AZQqFLIjh",
-      "ext": ".png",
-      "hash": "456ccd76",
-      "size": 2161,
-      "fs_path": "image/ui/nautical-v1/STA-rarity--purple.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "EjF8IahvQIKKlyKifOsVkP2l",
-      "ext": ".png",
-      "hash": "49f33776",
-      "size": 4580,
-      "fs_path": "image/ui/nautical-v1/BTN-secondary--disabled.png",
+      "uuid": "EjyrgYOA0KJlXjPOlwEXx6Td",
+      "ext": ".txt",
+      "hash": "396843fa",
+      "size": 883,
+      "fs_path": "audio/CREDITS.txt",
       "prefix": "../assets"
     },
     {
@@ -1100,43 +1060,35 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "Em2ksdIMLE2oMtgGxkc59SgK",
+      "uuid": "EqWiMaqzn6NQ4uhj6bxTtkjM",
       "ext": ".png",
-      "hash": "445241cf",
-      "size": 3123,
-      "fs_path": "image/ui/nautical-v1/NAV-arrow.png",
+      "hash": "80451b80",
+      "size": 819,
+      "fs_path": "image/ui/nautical-v1/STA-locked.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "Eo6UaX5jmI0WymoUu09cRUAu",
+      "uuid": "ErJc6TehQ_g67OyR3BNJeKyP",
+      "ext": ".lua",
+      "hash": "5df31f39",
+      "size": 5125,
+      "fs_path": "Game/ShoreWorld.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "ErjIUcUeEdeascjZpkjNOr6e",
       "ext": ".png",
-      "hash": "3b0e28a4",
-      "size": 1130,
-      "fs_path": "image/ui/nautical-v1/FX-toast.png",
+      "hash": "e5d454a5",
+      "size": 4148,
+      "fs_path": "image/ui/nautical-v1/BTN-tab--disabled.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "EpwX2YCrPrgnJrwJjQMch3Fo",
+      "uuid": "EueIkZ4Nn8c9PP9iqi5PD68F",
       "ext": ".png",
-      "hash": "854049d8",
-      "size": 4655,
-      "fs_path": "image/ui/nautical-v1/BTN-tab--selected.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "EsObiQNfF9YV5SODAhl1bQR0",
-      "ext": ".png",
-      "hash": "06867c2b",
-      "size": 1093,
-      "fs_path": "image/ui/nautical-v1/STA-badge--coral.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "Ew1sMXsbOa7y3GOR2YuRrFod",
-      "ext": ".png",
-      "hash": "d1fdeec8",
-      "size": 20085,
-      "fs_path": "image/ui/nautical-v1/BTN-action.png",
+      "hash": "6e93abec",
+      "size": 8220,
+      "fs_path": "image/ui/nautical-v1/STA-tension.png",
       "prefix": "../assets"
     },
     {
@@ -1148,6 +1100,14 @@
       "prefix": "../scripts"
     },
     {
+      "uuid": "F-NQeSixEGQ2X7gd-0b4xjlu",
+      "ext": ".png",
+      "hash": "09a56e34",
+      "size": 316,
+      "fs_path": "image/ui/nautical-v1/STA-bar--fill-mask.png",
+      "prefix": "../assets"
+    },
+    {
       "uuid": "F3i4yduhFsKNte1rHepIVHaZ",
       "ext": ".png",
       "hash": "a966e5e8",
@@ -1156,28 +1116,68 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "FAB26aVJn9RzrgLsjx2YihCa",
+      "uuid": "F6dz0RnrkVP-s513iaIcMa-X",
       "ext": ".png",
-      "hash": "edde1b7c",
-      "size": 1097,
-      "fs_path": "image/ui/nautical-v1/STA-badge--gold.png",
+      "hash": "07c151f9",
+      "size": 406,
+      "fs_path": "image/ui/nautical-v1/STA-bar--fill-gold.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "FAv2seIAaPCLyylHxumUD4tn",
+      "uuid": "F9P4Ybbb9oipeYbuVq4YRwmp",
       "ext": ".png",
-      "hash": "1cf0eaff",
-      "size": 5499,
-      "fs_path": "image/ui/nautical-v1/BTN-nav.png",
+      "hash": "1fb22581",
+      "size": 16285,
+      "fs_path": "image/ui/nautical-v1/BTN-action--disabled.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "FBq7aZb4hnpfYh092DbTEg8b",
+      "uuid": "FCCoabRa83nSPaYfLry2L7nV",
       "ext": ".png",
-      "hash": "e5d454a5",
-      "size": 4148,
-      "fs_path": "image/ui/nautical-v1/BTN-tab--disabled.png",
+      "hash": "044859fc",
+      "size": 19894,
+      "fs_path": "image/ui/nautical-v1/BTN-action--pressed.png",
       "prefix": "../assets"
+    },
+    {
+      "uuid": "FE372XZpm5pvoBC4nlgIkT-l",
+      "ext": ".lua",
+      "hash": "b28480c5",
+      "size": 5235,
+      "fs_path": "Game/HomeUI.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "FGiIEVVULW7XawIApKpR-Mw2",
+      "ext": ".png",
+      "hash": "4fb65cfd",
+      "size": 10751,
+      "fs_path": "image/ui/nautical-v1/NAV-look.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "FGsGOcgeqBRus8yh90Tiv3lT",
+      "ext": ".lua",
+      "hash": "376f82b0",
+      "size": 2043,
+      "fs_path": "Game/MusicAudio.lua",
+      "prefix": "../scripts"
+    },
+    {
+      "uuid": "FIXpuZHl6N7zByBQPDTq8Itv",
+      "ext": ".png",
+      "hash": "d1fdeec8",
+      "size": 20085,
+      "fs_path": "image/ui/nautical-v1/BTN-action.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "FJcfWeokiO7MTGrrJULAIcuX",
+      "ext": ".lua",
+      "hash": "42f92ea2",
+      "size": 768,
+      "fs_path": "Game/SkinWidgets.lua",
+      "prefix": "../scripts"
     },
     {
       "uuid": "FLRlIeTW-0szSxW70DywT9Ec",
@@ -1188,27 +1188,27 @@
       "prefix": "../scripts"
     },
     {
+      "uuid": "FLkeuRLUnBX4s0Da_itQezXd",
+      "ext": ".png",
+      "hash": "6dfa6410",
+      "size": 712,
+      "fs_path": "image/ui/nautical-v1/PLT-bubble--pointer-down.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "FNS0mT3abGzObdVtdyToqkLp",
+      "ext": ".png",
+      "hash": "1cf0eaff",
+      "size": 5499,
+      "fs_path": "image/ui/nautical-v1/BTN-nav.png",
+      "prefix": "../assets"
+    },
+    {
       "uuid": "FNqFiQyhT8KGkv-fsrpSu0G1",
       "ext": ".lua",
       "hash": "95d20f44",
       "size": 7504,
       "fs_path": "Game/FishTraffic.lua",
-      "prefix": "../scripts"
-    },
-    {
-      "uuid": "FPeYIfBc2vJEWpIizJh5L80d",
-      "ext": ".png",
-      "hash": "89178b5f",
-      "size": 3988,
-      "fs_path": "image/ui/nautical-v1/NAV-joystick--knob.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "FT3GKb9OBpNCvDirSFyZVhOX",
-      "ext": ".lua",
-      "hash": "42d499ab",
-      "size": 8586,
-      "fs_path": "Game/ForestScene.lua",
       "prefix": "../scripts"
     },
     {
@@ -1220,6 +1220,22 @@
       "prefix": "../scripts"
     },
     {
+      "uuid": "FWdQGYd1ZdUX8NIdqintX199",
+      "ext": ".shader",
+      "hash": "d8f63af6",
+      "size": 2149,
+      "fs_path": "Shaders/BLGL/CrescentForestStream.shader",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "FX0qeQO-C3U3rdwfgEA22UbU",
+      "ext": ".png",
+      "hash": "258bebfa",
+      "size": 2203,
+      "fs_path": "image/ui/nautical-v1/STA-rarity--orange.png",
+      "prefix": "../assets"
+    },
+    {
       "uuid": "FYIHmVdo_fDOGfLjAUfKiSdr",
       "ext": ".lua",
       "hash": "94d3f613",
@@ -1228,11 +1244,11 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "FblPIaLa3aEZTDOhlRjFe1_f",
+      "uuid": "FZlCMa8vdTqozFAwS3fhfHv3",
       "ext": ".png",
-      "hash": "fdc628ae",
-      "size": 5453,
-      "fs_path": "image/ui/nautical-v1/BTN-nav--disabled.png",
+      "hash": "4789358f",
+      "size": 5416,
+      "fs_path": "image/ui/nautical-v1/BTN-nav--pressed.png",
       "prefix": "../assets"
     },
     {
@@ -1244,43 +1260,19 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "Fh11mZej6JSej7RQO9tcibDj",
+      "uuid": "Fdt3ETY9RAc3dgjhzB9auAQK",
       "ext": ".png",
-      "hash": "96e04534",
-      "size": 4110,
-      "fs_path": "image/ui/nautical-v1/BTN-square--hover.png",
+      "hash": "b44b7797",
+      "size": 699,
+      "fs_path": "image/ui/nautical-v1/PLT-bubble--pointer-up.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "FlnVeQvW3pl6vcpDAfleViT8",
+      "uuid": "Fi8vKb78cN9cwUMhdUpPs4uG",
       "ext": ".png",
-      "hash": "6dfa6410",
-      "size": 712,
-      "fs_path": "image/ui/nautical-v1/PLT-bubble--pointer-down.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "FmU_mYVGM4mUlgjHKv3oFB9j",
-      "ext": ".lua",
-      "hash": "bd5bc0ca",
-      "size": 14536,
-      "fs_path": "Game/UISkinData.lua",
-      "prefix": "../scripts"
-    },
-    {
-      "uuid": "FmhEWcekARloTu6BcxNand0L",
-      "ext": ".png",
-      "hash": "09b9af8a",
-      "size": 171830,
-      "fs_path": "image/ui/nautical-v1/icons@2x.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "Fmzh0aDb2hJKjReIWMWBzki3",
-      "ext": ".png",
-      "hash": "db6fb9c3",
-      "size": 5110,
-      "fs_path": "image/ui/nautical-v1/STA-quality.png",
+      "hash": "5e628576",
+      "size": 9161,
+      "fs_path": "image/ui/nautical-v1/FX-discover.png",
       "prefix": "../assets"
     },
     {
@@ -1292,14 +1284,6 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "FoOCcYvDVyjCWpnAtOCsbBWG",
-      "ext": ".lua",
-      "hash": "b74258f0",
-      "size": 5807,
-      "fs_path": "Game/Music.lua",
-      "prefix": "../scripts"
-    },
-    {
       "uuid": "FwsHqcQK7njCe9uzrcbJPKft",
       "ext": ".jpg",
       "hash": "6fcb9d89",
@@ -1308,12 +1292,20 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "Fx76Ebpu8yQJdeYw92-GuaS2",
+      "uuid": "Fyp0sc0zapcObPcSg5l9Xo2l",
       "ext": ".png",
-      "hash": "31dd0365",
-      "size": 1233,
-      "fs_path": "image/ui/nautical-v1/STA-tension--needle.png",
+      "hash": "69335e10",
+      "size": 6518,
+      "fs_path": "image/ui/nautical-v1/PLT-page.png",
       "prefix": "../assets"
+    },
+    {
+      "uuid": "G2y0KZ9jnS-r-0MKRktD3BEc",
+      "ext": ".lua",
+      "hash": "7716bc30",
+      "size": 863,
+      "fs_path": "Game/SeaRegions.lua",
+      "prefix": "../scripts"
     },
     {
       "uuid": "G98VKerP2GeZ232cctyAjPrp",
@@ -1324,28 +1316,12 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "GCxS4Vfphlt5bDpRgzHVwFR2",
-      "ext": ".png",
-      "hash": "4fc37dec",
-      "size": 2392,
-      "fs_path": "image/ui/nautical-v1/FX-collect.png",
-      "prefix": "../assets"
-    },
-    {
       "uuid": "GD02UQTEqkpVLq78Cq7D33TG",
       "ext": ".lua",
       "hash": "8caaa42b",
       "size": 6429,
       "fs_path": "Game/Bay.lua",
       "prefix": "../scripts"
-    },
-    {
-      "uuid": "GEOIASXucwwTfgw-x-3gzh0W",
-      "ext": ".shader",
-      "hash": "d8f63af6",
-      "size": 2149,
-      "fs_path": "Shaders/BLGL/CrescentForestStream.shader",
-      "prefix": "../assets"
     },
     {
       "uuid": "GEbDefXUuySZ0Ne3bel-nDzR",
@@ -1356,22 +1332,6 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "GFLvEbmf6M4Pd38u9xy4Kcu2",
-      "ext": ".lua",
-      "hash": "42f92ea2",
-      "size": 768,
-      "fs_path": "Game/SkinWidgets.lua",
-      "prefix": "../scripts"
-    },
-    {
-      "uuid": "GFM8Scr-lGz7W7QH1TfWY2qA",
-      "ext": ".png",
-      "hash": "4789358f",
-      "size": 5416,
-      "fs_path": "image/ui/nautical-v1/BTN-nav--pressed.png",
-      "prefix": "../assets"
-    },
-    {
       "uuid": "GH_SaajNydCBbvA-lvsvCsat",
       "ext": ".png",
       "hash": "56352c0a",
@@ -1380,19 +1340,27 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "GKMmwemOb2DxXzoLpg33m6A9",
+      "uuid": "GI6hOSxodrQ539LlqeiWzIMC",
       "ext": ".png",
-      "hash": "43f39260",
-      "size": 5131,
-      "fs_path": "image/ui/nautical-v1/STA-quality--blue.png",
+      "hash": "b39aa8a5",
+      "size": 426,
+      "fs_path": "image/ui/nautical-v1/STA-bar--fill-green.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "GPiCUd-BHhHx5TpHnEuN9LvU",
+      "uuid": "GJO3oYTjCDMuKuGJ5YBkiN2P",
       "ext": ".png",
-      "hash": "03a19746",
-      "size": 1057,
-      "fs_path": "image/ui/nautical-v1/PLT-caption.png",
+      "hash": "98781327",
+      "size": 4481,
+      "fs_path": "image/ui/nautical-v1/PLT-tooltip.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "GMwXaZQQ-SiNnTG8fyri11K0",
+      "ext": ".png",
+      "hash": "33227660",
+      "size": 4963,
+      "fs_path": "image/ui/nautical-v1/PLT-card.png",
       "prefix": "../assets"
     },
     {
@@ -1412,19 +1380,19 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "GYRvyWOVxnBXXMgB7evs-6VV",
-      "ext": ".png",
-      "hash": "f85f791a",
-      "size": 423,
-      "fs_path": "image/ui/nautical-v1/STA-bar--fill-coral.png",
-      "prefix": "../assets"
+      "uuid": "GW-tqW_4o-RZNexbhqdK4Fu3",
+      "ext": ".lua",
+      "hash": "63b5f32c",
+      "size": 3895,
+      "fs_path": "Game/ShoreArt.lua",
+      "prefix": "../scripts"
     },
     {
-      "uuid": "GfU1YdiYvtBV2QP0C-9PacP5",
-      "ext": ".shader",
-      "hash": "f16085b3",
-      "size": 937,
-      "fs_path": "Shaders/BLGL/CrescentBeachSand.shader",
+      "uuid": "Gc4PWTccsg5_41ENrOvNWWY9",
+      "ext": ".png",
+      "hash": "cb2ee63f",
+      "size": 273,
+      "fs_path": "image/ui/nautical-v1/NAV-scroll.png",
       "prefix": "../assets"
     },
     {
@@ -1436,20 +1404,36 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "GwjtWRHUnQzAHgLlL9IwV860",
+      "uuid": "GjUeWR6LckChKPHjhdVQCggp",
       "ext": ".png",
-      "hash": "98781327",
-      "size": 4481,
-      "fs_path": "image/ui/nautical-v1/PLT-tooltip.png",
+      "hash": "351ab317",
+      "size": 4094,
+      "fs_path": "image/ui/nautical-v1/BTN-tab--hover.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "GraQGa3aqDEKBGJLbCnLvZ2B",
+      "ext": ".xml",
+      "hash": "b567e1b6",
+      "size": 620,
+      "fs_path": "RenderPaths/CrescentBeach.xml",
       "prefix": "../assets"
     },
     {
       "uuid": "GwuHoTG00fPAfC4mvpQo0vka",
       "ext": ".lua",
-      "hash": "a8a381a2",
-      "size": 37374,
+      "hash": "05665391",
+      "size": 37425,
       "fs_path": "Game/App.lua",
       "prefix": "../scripts"
+    },
+    {
+      "uuid": "GxOKiQhXS9igFqIRl8_A_QZU",
+      "ext": ".png",
+      "hash": "4fc37dec",
+      "size": 2392,
+      "fs_path": "image/ui/nautical-v1/FX-collect.png",
+      "prefix": "../assets"
     },
     {
       "uuid": "Gxby8fF0NxQTWpm5_Z0ipzjA",
@@ -1460,15 +1444,7 @@
       "prefix": "../scripts"
     },
     {
-      "uuid": "H-s2MfneBo60luudV7vRNmZc",
-      "ext": ".png",
-      "hash": "f5d56027",
-      "size": 4423,
-      "fs_path": "image/ui/nautical-v1/PLT-resource.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "H-tn0exefrCk5Zjm5uUHzCOM",
+      "uuid": "H17wMegmCiDoA5caohcyG64V",
       "ext": ".png",
       "hash": "7289e898",
       "size": 7163,
@@ -1476,20 +1452,36 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "H7Dv-cMM7X66Safk7nXbLK5s",
+      "uuid": "H3LiOc1ajuybTgb5OZ_qpYWq",
       "ext": ".png",
-      "hash": "351ab317",
-      "size": 4094,
-      "fs_path": "image/ui/nautical-v1/BTN-tab--hover.png",
+      "hash": "20292c01",
+      "size": 4159,
+      "fs_path": "image/ui/nautical-v1/BTN-square--disabled.png",
       "prefix": "../assets"
     },
     {
-      "uuid": "HEqC6YsQfsDznGHKlqv6DF6c",
+      "uuid": "H3ddEWvaJt8S3isFZQtCAIoJ",
+      "ext": ".png",
+      "hash": "7ef95b65",
+      "size": 12270,
+      "fs_path": "image/ui/nautical-v1/NAV-joystick.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "HCJLyXTZ0FsXN9FxaeovL_1e",
       "ext": ".lua",
-      "hash": "376f82b0",
-      "size": 2043,
-      "fs_path": "Game/MusicAudio.lua",
+      "hash": "42d499ab",
+      "size": 8586,
+      "fs_path": "Game/ForestScene.lua",
       "prefix": "../scripts"
+    },
+    {
+      "uuid": "HGgxucMY3zcPtB0ATI_UOIWw",
+      "ext": ".png",
+      "hash": "a09d6077",
+      "size": 151,
+      "fs_path": "image/ui/nautical-v1/NAV-target--trajectory-segment.png",
+      "prefix": "../assets"
     },
     {
       "uuid": "HH6Hea4TIbcaOCCXijFGHCP_",
@@ -1516,27 +1508,11 @@
       "prefix": "../assets"
     },
     {
-      "uuid": "HTL2eXcdqymdO5qlf2pX8Emv",
+      "uuid": "HWVPgY8he9xCIl-Y0CpuCtqw",
       "ext": ".png",
-      "hash": "258bebfa",
-      "size": 2203,
-      "fs_path": "image/ui/nautical-v1/STA-rarity--orange.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "HTlNQZbF2YZuuehCd9If97CA",
-      "ext": ".png",
-      "hash": "80451b80",
-      "size": 819,
-      "fs_path": "image/ui/nautical-v1/STA-locked.png",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "HVrjCQNd2kvigj7h985MuV3W",
-      "ext": ".shaderinc",
-      "hash": "194f7752",
-      "size": 1304,
-      "fs_path": "Shaders/BLGL/CrescentBeachSurf.shaderinc",
+      "hash": "4de7949f",
+      "size": 7692,
+      "fs_path": "image/ui/nautical-v1/BTN-primary--pressed.png",
       "prefix": "../assets"
     },
     {
@@ -1548,19 +1524,19 @@
       "prefix": "../assets"
     },
     {
+      "uuid": "HeFdYc08WiMzBGLyx1Tg0zOq",
+      "ext": ".shader",
+      "hash": "d09ce4af",
+      "size": 600,
+      "fs_path": "Shaders/BLGL/CrescentForestBark.shader",
+      "prefix": "../assets"
+    },
+    {
       "uuid": "HmoaqR4L3YAn4cSh_uUOh9je",
       "ext": ".shader",
       "hash": "58dda440",
       "size": 4381,
       "fs_path": "Shaders/BLGL/CrescentLegacyWater.shader",
-      "prefix": "../assets"
-    },
-    {
-      "uuid": "HnUvaYkphuJoHetdrz7e4C2t",
-      "ext": ".png",
-      "hash": "04d3bb36",
-      "size": 5501,
-      "fs_path": "image/ui/nautical-v1/NAV-zone.png",
       "prefix": "../assets"
     },
     {
@@ -1577,6 +1553,30 @@
       "hash": "484afe03",
       "size": 1191,
       "fs_path": "Shaders/BLGL/CrescentLegacyWaves.shaderinc",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "HvZt6flBqTnlPJvFiATERlwU",
+      "ext": ".png",
+      "hash": "76a09a65",
+      "size": 1091,
+      "fs_path": "image/ui/nautical-v1/STA-badge.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "HwDxsTXYslvmVEtEE1VVEAUx",
+      "ext": ".png",
+      "hash": "4968b1b0",
+      "size": 5154,
+      "fs_path": "image/ui/nautical-v1/STA-quality--purple.png",
+      "prefix": "../assets"
+    },
+    {
+      "uuid": "Hyuj2Tb9OZJ50e7OYR4xdxTL",
+      "ext": ".png",
+      "hash": "49f33776",
+      "size": 4580,
+      "fs_path": "image/ui/nautical-v1/BTN-secondary--disabled.png",
       "prefix": "../assets"
     },
     {
@@ -1598,6 +1598,6 @@
   ],
   "metadata": {
     "total_files": 199,
-    "total_size": 33833709
+    "total_size": 33833822
   }
 }
