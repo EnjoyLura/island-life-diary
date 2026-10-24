@@ -1,5 +1,0 @@
-<!-- Retained, unlit top-down water only. No lighting, reflections or depth copy. -->
-<renderpath>
-    <command type="clear" color="0.01 0.2 0.5 1.0" depth="1.0" stencil="0" />
-    <command type="scenepass" pass="base" />
-</renderpath>
