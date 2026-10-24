@@ -1,0 +1,4 @@
+<material>
+    <surfaceshader name="Shaders/BLGL/CrescentHomeOcean.shader" />
+    <surfacetexture name="water_art" texture="image/HomeIslandV46/water.png" />
+</material>

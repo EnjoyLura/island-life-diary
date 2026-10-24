@@ -1,0 +1,24 @@
+{
+  "$schema": "../schemas/resources.schema.json",
+
+  "preload_groups": [
+    "shader-startup",
+    "ui-startup"
+  ],
+
+  "groups": {
+    "default": [
+      "**"
+    ],
+    "shader-startup": [
+      "Shaders/BLGL/*.shaderinc"
+    ],
+    "ui-startup": [
+      "image/ui/nautical-v1/**",
+      "image/HomeIslandV46/**",
+      "Materials/HomeOcean.xml",
+      "Shaders/BLGL/CrescentHomeOcean.shader",
+      "RenderPaths/HomeOcean.xml"
+    ]
+  }
+}
